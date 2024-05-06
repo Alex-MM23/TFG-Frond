@@ -14,6 +14,18 @@
             <input type="password" [(ngModel)]="confirmPassword" class="form-control" placeholder="Ingrese password de nuevo">
             <label>Repetir Password</label>
         </div>
+        <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]="name" class="form-control" placeholder="Ingrese nombre">
+            <label>Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]="surname" class="form-control" placeholder="Ingrese apellido">
+            <label>Apellido</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" [(ngModel)]="email" class="form-control" placeholder="Ingrese email">
+            <label>Email</label>
+        </div>
         <div class="d-grid gap-2 mb-3">
             <button type="button" (click)="addUser()" class="btn btn-primary btn-lg">Aceptar</button>
         </div>

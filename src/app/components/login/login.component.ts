@@ -35,7 +35,10 @@ export class LoginComponent implements OnInit {
     // Creamos el body
     const user: User = {
       username: this.username,
-      password: this.password
+      password: this.password,
+      name: '',
+      surname: '',
+      email: ''
     }
 
     this.loading = true;

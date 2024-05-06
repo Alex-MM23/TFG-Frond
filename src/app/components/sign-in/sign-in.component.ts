@@ -15,6 +15,9 @@ export class SignInComponent implements OnInit {
   username: string = '';
   password: string = '';
   confirmPassword: string = '';
+  name: string = '';
+  surname: string = '';
+  email: string = '';
   loading: boolean = false;
 
   constructor(private toastr: ToastrService,
@@ -28,7 +31,7 @@ export class SignInComponent implements OnInit {
   addUser() {
 
     // Validamos que el usuario ingrese valores
-    if (this.username == '' || this.password == '' || this.confirmPassword == '') {
+    if (this.username == '' || this.password == '' || this.confirmPassword == '' || this.name == '' || this.surname == '' || this.email == '') {
       this.toastr.error('Todos los campos son obligatorios', 'Error');
       return;
     }
@@ -42,7 +45,11 @@ export class SignInComponent implements OnInit {
     // Creamos el objeto
     const user: User = {
       username: this.username,
-      password: this.password
+      password: this.password,
+      name: this.name,
+      surname: this.surname,
+      email: this.email
+
     }
 
     this.loading = true;

@@ -19,6 +19,7 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
 import { DashboardLogoutComponent } from './components/dashboard-logout/dashboard-logout.component';
 import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.
     NavbarComponent,
     SpinnerComponent,
     DashboardLogoutComponent,
-    NavbarLogoutComponent
+    NavbarLogoutComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
