@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/services/product.service'
+import { Component } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartComponent {
 
   myCart$ = this.storeService.myCart$;
 
   viewCart: boolean = false;
 
   constructor(private storeService: ProductService) { }
-
-  ngOnInit(): void {
-  }
 
   updateUnits(operation: string, id: number) {
 
@@ -45,5 +42,6 @@ export class CartComponent implements OnInit {
     const result = this.storeService.totalCart();
     return result;
   }
+
 
 }

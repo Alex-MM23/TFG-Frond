@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  listProduct: Product[] = []
+  products: Product[] = [];
 
   constructor(private _productService: ProductService) { }
 
@@ -18,8 +18,13 @@ export class DashboardComponent implements OnInit {
 
   getProducts() {
     this._productService.getProducts().subscribe(data => {
-      this.listProduct = data;
+      this.products = data;
     })
+  }
+
+  addToCart(product: Product) {
+
+    this._productService.addProduct(product)
   }
 
 }

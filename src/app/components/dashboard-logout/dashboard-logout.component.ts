@@ -8,8 +8,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./dashboard-logout.component.css']
 })
 export class DashboardLogoutComponent implements OnInit {
-  listProduct: Product[] = []
-
+  products: Product[] = [];
   constructor(private _productService: ProductService) { }
 
   ngOnInit(): void {
@@ -18,8 +17,12 @@ export class DashboardLogoutComponent implements OnInit {
 
   getProducts() {
     this._productService.getProducts().subscribe(data => {
-      this.listProduct = data;
+      this.products = data;
     })
+  }
+
+  addToCart(product: Product) {
+    this._productService.addProduct(product)
   }
 
 }

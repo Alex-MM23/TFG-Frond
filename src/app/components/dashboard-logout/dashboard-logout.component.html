@@ -1,18 +1,18 @@
 <app-navbar-logout></app-navbar-logout>
 <div class="container mt-2 text-center">
     <h2>Productos</h2>
-    <article class="product" *ngFor="let item of listProduct">
+    <article class="product" *ngFor="let product of products">
         <div class="product-header">
-            <h3 class="product-header-title">{{ item.title }}</h3>
-            <p>€ {{ item.price }}</p>
+            <h3 class="product-header-title">{{ product.title }}</h3>
+            <p>€ {{ product.price }}</p>
         </div>
         <div class="product-body">
-            <p>{{ item.description }}</p>
+            <p>{{ product.description }}</p>
         </div>
         <div class="product-footer">
-            <button class="product-footer-button">
-                <a>Añadir a Carrito</a>
-            </button>
+            <button class="product-footer-button" (click)="addToCart(product)">
+                Añadir
+              </button>
         </div>
     </article>
 </div>

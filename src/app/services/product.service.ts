@@ -31,6 +31,7 @@ export class ProductService {
   myCart$ = this.myCart.asObservable();
 
 
+  //añado producto al carrito
   addProduct(product: Product) {
 
     // debugger;
