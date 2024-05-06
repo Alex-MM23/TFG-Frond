@@ -5,7 +5,7 @@ import { ProductService } from 'src/app/services/product.service';
 @Component({
   selector: 'app-dashboard-logout',
   templateUrl: './dashboard-logout.component.html',
-  styleUrls: ['./dashboard-logout.component.css', '/src/assets/plantilla.css']
+  styleUrls: ['./dashboard-logout.component.css']
 })
 export class DashboardLogoutComponent implements OnInit {
   listProduct: Product[] = []

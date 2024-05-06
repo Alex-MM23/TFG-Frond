@@ -5,7 +5,7 @@ import { ProductService } from 'src/app/services/product.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css', '/src/plantilla.css']
 })
 export class DashboardComponent implements OnInit {
   listProduct: Product[] = []
