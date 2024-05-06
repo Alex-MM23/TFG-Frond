@@ -20,6 +20,8 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
 import { DashboardLogoutComponent } from './components/dashboard-logout/dashboard-logout.component';
 import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FormularioContactoComponent } from './components/formulario-contacto/formulario-contacto.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { CartComponent } from './components/cart/cart.component';
     SpinnerComponent,
     DashboardLogoutComponent,
     NavbarLogoutComponent,
-    CartComponent
+    CartComponent,
+    FooterComponent,
+    FormularioContactoComponent
   ],
   imports: [
     BrowserModule,
