@@ -8,13 +8,15 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 
 // Guards
 import { AuthGuard } from './utils/auth.guard';
+import { DashboardLogoutComponent } from './components/dashboard-logout/dashboard-logout.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboardLogout', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signIn', component: SignInComponent },
+  { path: 'dashboardLogout', component: DashboardLogoutComponent},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  { path: '**', redirectTo: 'dashboardLogout', pathMatch: 'full' }
 ];
 
 @NgModule({
