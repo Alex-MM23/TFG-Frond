@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-page-carrito',
+  templateUrl: './page-carrito.component.html',
+  styleUrls: ['./page-carrito.component.css']
 })
-export class CartComponent {
+export class PageCarritoComponent implements OnInit {
 
   myCart$ = this.storeService.myCart$;
 
@@ -46,6 +46,13 @@ export class CartComponent {
 
   pagcarrito() {
     this.router.navigate(['/carrito'])
+  }
+
+  pgdest() {
+    this.router.navigate(['/dashboard'])
+  }
+
+  ngOnInit(): void {
   }
 
 }

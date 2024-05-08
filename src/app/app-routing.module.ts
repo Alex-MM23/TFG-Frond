@@ -9,12 +9,14 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 // Guards
 import { AuthGuard } from './utils/auth.guard';
 import { DashboardLogoutComponent } from './components/dashboard-logout/dashboard-logout.component';
+import { PageCarritoComponent } from './components/page-carrito/page-carrito.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboardLogout', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signIn', component: SignInComponent },
   { path: 'dashboardLogout', component: DashboardLogoutComponent},
+  { path: 'carrito', component: PageCarritoComponent},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: 'dashboardLogout', pathMatch: 'full' }
 ];
