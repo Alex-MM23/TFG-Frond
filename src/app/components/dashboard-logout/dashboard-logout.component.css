@@ -1,53 +1,197 @@
-.product {
-    flex-basis: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 0.1px solid #a5a5a4;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 0.5rem;
-    box-shadow: 10px -1px 116px -62px rgb(90, 94, 93);
-  }
-  
-  .product-header {
-    flex-basis: 30%;
-  }
-  
-  .product-header p {
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  
-  .product-body {
-    flex-basis: 50%;
-  }
-  
-  .product-footer {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-basis: 20%;
-  }
-  
-  .product-footer-button {
-    cursor: pointer;
-    border: none;
-    border-radius: 0.25rem;
-    background-color: #cc1414;
-    color: white;
-    padding: 0.5rem;
-    width: 50%;
-  }
-  
-  .product-footer-button:hover {
-    color: #cc1414;
-    background-color: white;
-    border: 1px solid #cc1414;
-  }
-  
-  .product:hover {
-    transform: scale(1.05);
-  }
-  
-  
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Estilos para las secciones */
+section {
+  padding: 60px 20px;
+}
+
+.PrimerSection {
+  background: url('/src/assets/img/your-image.jpg') no-repeat center center/cover; /* Añade la imagen de fondo */
+  color: #000; /* Letras negras */
+  position: relative;
+}
+
+.PrimerSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente para mejorar la legibilidad */
+  z-index: 1;
+}
+
+.PrimerSection .cuerpo {
+  position: relative;
+  z-index: 2;
+}
+
+.SegundoSection, .TercerSection, .CuartoSection {
+  background-color: #fff;
+}
+
+/* Estilos para el contenedor principal */
+.cuerpo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para contenedores flexibles */
+.flex-container, .flex-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container2 .izq, .flex-container2 .der {
+  flex: 1;
+}
+
+.flex-container2 .izq {
+  text-align: left;
+}
+
+.flex-container2 .der {
+  text-align: right;
+}
+
+.flex-container .left, .flex-container .right {
+  flex: 1;
+}
+
+.flex-container .right {
+  text-align: right;
+}
+
+.flex-container .left img, .flex-container .right img, .equipo1 img, .equipo2 img, .equipo3 img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Estilos para títulos y párrafos */
+.titulo h1, .titulo2 h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.titulo p, .titulo2 p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.Title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.texto p {
+  font-size: 1em;
+}
+
+/* Estilos específicos para PrimerSection */
+.PrimerSection .izq h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.PrimerSection .izq h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.scroll-down img {
+  max-width: 50px;
+}
+
+/* Estilos específicos para SegundoSection */
+.SegundoSection .right .der1, .SegundoSection .right .der2, .SegundoSection .right .der3, .SegundoSection .right .der4 {
+  margin-bottom: 20px;
+}
+
+.SegundoSection .right .der1 img, .SegundoSection .right .der2 img, .SegundoSection .right .der3 img, .SegundoSection .right .der4 img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.SegundoSection .right .der1 p, .SegundoSection .right .der2 p, .SegundoSection .right .der3 p, .SegundoSection .right .der4 p {
+  margin: 10px 0;
+}
+
+.SegundoSection .right a {
+  color: #007bff;
+  display: block;
+  margin-top: 10px;
+}
+
+.SegundoSection .right a:hover {
+  color: #0056b3;
+}
+
+/* Estilos específicos para TercerSection */
+.TercerSection .left h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.TercerSection .left p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Estilos específicos para CuartoSection */
+.CuartoSection .equipo1, .CuartoSection .equipo2, .CuartoSection .equipo3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.CuartoSection .equipo1 .texto, .CuartoSection .equipo2 .texto, .CuartoSection .equipo3 .texto {
+  margin-top: 10px;
+}
+
+.CuartoSection .equipo1 img, .CuartoSection .equipo2 img, .CuartoSection .equipo3 img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.CuartoSection .equipo1 .Title, .CuartoSection .equipo2 .Title, .CuartoSection .equipo3 .Title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.CuartoSection .equipo1 .texto p, .CuartoSection .equipo2 .texto p, .CuartoSection .equipo3 .texto p {
+  font-size: 0.9em;
+}
