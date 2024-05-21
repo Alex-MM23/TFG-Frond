@@ -1,93 +1,80 @@
 /* Estilos generales para el navbar */
 .navbar {
-  background-color: #000; /* Fondo negro */
+  background-color: #fff;
+  height: 120px;
 }
 
 .navbar-brand a {
-  color: #ff0000; /* Texto del logo en rojo */
+  color: #000; /* Texto del logo en negro */
   font-weight: bold;
   font-size: 24px;
 }
 
+.navbar-nav {
+  display: flex;
+  flex-direction: row; /* Elementos en una sola línea */
+  flex-grow: 1; /* Estirar para ocupar todo el espacio disponible */
+  justify-content: space-around; /* Distribuir uniformemente */
+}
+
+.navbar-nav .nav-item {
+  flex-grow: 1; /* Cada elemento ocupa el mismo espacio */
+  text-align: center; /* Centramos el texto */
+}
+
 .navbar-nav .nav-item .nav-link {
-  color: #fff; /* Texto de los enlaces en blanco */
+  color: #000; /* Texto de los enlaces en negro */
   margin: 0 10px;
-  font-size: 18px;
+  font-size: 16px;
+  transition: color 0.3s, font-weight 0.3s; /* Transición suave para color y peso de la fuente */
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #ff0000; /* Texto de los enlaces en rojo al pasar el cursor */
+  color: #ff0000; /* Cambiar a rojo al pasar el ratón */
+  font-weight: bold; /* Aumentar peso de la fuente al pasar el ratón */
 }
 
 .btn-outline-success {
-  color: #fff;
-  border-color: #ff0000; /* Borde del botón LogOut en rojo */
-}
-
-.btn-outline-success:hover {
-  background-color: #ff0000; /* Fondo rojo al pasar el cursor */
-  border-color: #ff0000;
+  color: #000;
+  border-color: #000; /* Borde del botón LogOut en negro */
 }
 
 .form-control {
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #ff0000; /* Borde de la barra de búsqueda en rojo */
+  background-color: transparent; /* Sin fondo */
+  color: #000;
+  border: 1px solid #000; /* Borde de la barra de búsqueda en negro */
 }
 
 .btn-outline-success[type="submit"] {
-  color: #fff;
-  border-color: #ff0000; /* Borde del botón de búsqueda en rojo */
-}
-
-.btn-outline-success[type="submit"]:hover {
-  background-color: #ff0000; /* Fondo rojo al pasar el cursor */
-  border-color: #ff0000;
+  color: #000;
+  border-color: #000; /* Borde del botón de búsqueda en negro */
 }
 
 .dropdown-menu {
   background-color: #000; /* Fondo negro del menú desplegable */
-  border: 1px solid #ff0000; /* Borde rojo */
+  border: 1px solid #000; /* Borde negro */
 }
 
 .dropdown-item {
-  color: #fff; /* Texto en blanco */
-}
-
-.dropdown-item:hover {
-  background-color: #ff0000; /* Fondo rojo al pasar el cursor */
   color: #000; /* Texto en negro */
 }
 
 .navbar-cart {
-  color: #ff0000; /* Icono del carrito en rojo */
-  cursor: pointer;
-  position: relative;
+  color: #000; /* Icono del carrito en negro */
 }
 
 .navbar-cart-items p {
-  color: #fff;
-  background-color: #ff0000;
-  border-radius: 50%;
-  padding: 5px 10px;
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  font-size: 14px;
-}
-
-.cart.show {
-  display: block;
+  color: #000;
+  background-color: #fff; /* Fondo blanco */
 }
 
 .cart {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
   background-color: #000; /* Fondo negro del carrito */
-  border: 1px solid #ff0000; /* Borde rojo */
-  width: 300px;
-  padding: 20px;
-  z-index: 1000;
+  border: 1px solid #000; /* Borde negro */
 }
+
+/* Estilo específico para el logotipo */
+.navbar-brand .logotop {
+  height: 180px;
+}
+

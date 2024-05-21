@@ -1,4 +1,5 @@
 <app-navbar-logout></app-navbar-logout>
+
 <div class="container mt-2 text-center">
     <h2>Productos</h2>
     <article class="product" *ngFor="let product of products">
@@ -10,9 +11,7 @@
             <p>{{ product.description }}</p>
         </div>
         <div class="product-footer">
-            <button class="product-footer-button" (click)="addToCart(product)">
-                Añadir
-              </button>
+            <button class="product-footer-button" (click)="addToCart(product)">Añadir</button>
         </div>
     </article>
 </div>
