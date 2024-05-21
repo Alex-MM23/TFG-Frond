@@ -43,17 +43,20 @@ export class LoginComponent implements OnInit {
 
     this.loading = true;
     this._userService.login(user).subscribe({
-      next: (token) => {
+      next: (response) => {
+        const { token, profileId } = response;
         localStorage.setItem('token', token);
-        this.router.navigate(['/dashboard'])
+        // Redirigir basado en el profileId
+        if (profileId === 1) {
+          this.router.navigate(['/admin']);
+        } else if (profileId === 2) {
+          this.router.navigate(['/dashboard']);
+        }
       },
       error: (e: HttpErrorResponse) => {
         this._errorService.msjError(e);
-        this.loading = false
+        this.loading = false;
       }
-    })
+    });
   }
-
-  
-
 }

@@ -79,4 +79,8 @@ export class ProductService {
     return total
   }
 
+  getCartItems() {
+    return this.myList;
+  }
+
 }

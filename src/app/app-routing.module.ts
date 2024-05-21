@@ -10,6 +10,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AuthGuard } from './utils/auth.guard';
 import { DashboardLogoutComponent } from './components/dashboard-logout/dashboard-logout.component';
 import { PageCarritoComponent } from './components/page-carrito/page-carrito.component';
+import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboardLogout', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'signIn', component: SignInComponent },
   { path: 'dashboardLogout', component: DashboardLogoutComponent},
   { path: 'carrito', component: PageCarritoComponent},
+  { path: 'admin', component: DashboardAdminComponent},
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: 'dashboardLogout', pathMatch: 'full' }
 ];

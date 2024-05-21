@@ -20,7 +20,7 @@ export class UserService {
     return this.http.post(`${this.myAppUrl}${this.myApiUrl}`, user);
    }
 
-   login(user: User): Observable<string> {
-    return this.http.post<string>(`${this.myAppUrl}${this.myApiUrl}/login`, user)
-   }
+   login(user: User): Observable<{ token: string, profileId: number }> {
+    return this.http.post<{ token: string, profileId: number }>(`${this.myAppUrl}${this.myApiUrl}/login`, user);
+  }
 }

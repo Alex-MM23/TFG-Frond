@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Componentes
 import { LoginComponent } from './components/login/login.component';
@@ -21,6 +22,8 @@ import { DashboardLogoutComponent } from './components/dashboard-logout/dashboar
 import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.component';
 import { CartComponent } from './components/cart/cart.component';
 import { PageCarritoComponent } from './components/page-carrito/page-carrito.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +36,16 @@ import { PageCarritoComponent } from './components/page-carrito/page-carrito.com
     DashboardLogoutComponent,
     NavbarLogoutComponent,
     CartComponent,
-    PageCarritoComponent
+    PageCarritoComponent,
+    SearchBarComponent,
+    DashboardAdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({
       timeOut: 4000,
