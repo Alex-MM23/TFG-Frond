@@ -25,7 +25,6 @@
 
 /* Input con border-radius */
 .form-control {
-    margin-bottom: 10px;
     padding-left: 10px;
     border-radius: 10px !important;
     font-family: 'Roboto', sans-serif; /* Aplicar la fuente a los inputs */
