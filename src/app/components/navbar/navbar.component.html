@@ -1,15 +1,81 @@
 <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Angular Node JWT</a>
-      <button class="btn btn-outline-success" (click)="logOut()" type="button">LogOut</button>
-      <div class="navbar-cart" (click)="onToggleCart()">
-        <div class="navbar-cart-items" *ngIf="(myCart$ | async)?.length">
-          <p>{{ (myCart$ | async)?.length }}</p>
-        </div>
-        <i class="fa-solid fa-cart-shopping text-danger"></i>
-      </div>
-      </div>
-    </nav>
-    <div class="cart" [ngClass]="{ show: viewCart }">
-      <app-cart></app-cart>
+  <div class="container-fluid">
+    <!-- Logo -->
+    <div class="navbar-brand">
+      <a href="#"></a>
     </div>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+        <div class="nav-item">
+          <a class="nav-link" href="#">¿Quiénes Somos?</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Disciplinas y Horarios</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Planificación Online</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Eventos y Coorporate</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Nutrición</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Tarifas</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Amigos y Equipo</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Tienda Bulls</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" href="#">Zona Bulls</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LogOut Button -->
+    <button class="btn btn-outline-success" (click)="logOut()" type="button">LogOut</button>
+
+    <!-- Search Form -->
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
+    <!-- User Dropdown -->
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Usuario
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" (click)="logOut()">LogOut</a></li>
+      </ul>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="navbar-cart" (click)="onToggleCart()">
+      <div class="navbar-cart-items" *ngIf="(myCart$ | async)?.length">
+        <p>{{ (myCart$ | async)?.length }}</p>
+      </div>
+      <i class="fa-solid fa-cart-shopping text-danger"></i>
+    </div>
+  </div>
+</nav>
+
+<!-- Cart Component -->
+<div class="cart" [ngClass]="{ show: viewCart }">
+  <app-cart></app-cart>
+</div>

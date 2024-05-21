@@ -1,19 +1,23 @@
 <app-navbar></app-navbar>
-<div class="container mt-2 text-center">
-  <h2>Productos</h2>
-  <article class="product" *ngFor="let product of products">
-    <div class="product-header">
-      <h3 class="product-header-title">{{ product.title }}</h3>
-      <p>$ {{ product.price }}</p>
+<div class="container mt-4 text-center">
+  <h2 class="mb-4">Productos</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let product of products">
+      <article class="product card h-100">
+        <div class="card-header">
+          <h3 class="product-header-title card-title">{{ product.title }}</h3>
+          <p class="product-price card-text">$ {{ product.price }}</p>
+        </div>
+        <div class="card-body">
+          <!-- <img [src]="product.images[0]" alt="" class="img-fluid mb-3"/> -->
+          <p class="product-description">{{ product.description }}</p>
+        </div>
+        <div class="card-footer">
+          <button class="product-footer-button btn btn-danger" (click)="addToCart(product)">
+            <i class="fa-solid fa-basket-shopping"></i> Añadir al Carrito
+          </button>
+        </div>
+      </article>
     </div>
-    <div class="product-body">
-      <!-- <img [src]="product.images[0]" alt="" /> -->
-      <p>{{ product.description }}</p>
-    </div>
-    <div class="product-footer">
-      <button class="product-footer-button" (click)="addToCart(product)">
-        <i class="fa-solid fa-basket-shopping"></i>
-      </button>
-    </div>
-  </article>
+  </div>
 </div>

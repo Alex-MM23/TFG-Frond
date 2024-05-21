@@ -1,4 +1,4 @@
-.product {
+/* .product {
     flex-basis: 20%;
     display: flex;
     flex-direction: column;
@@ -48,5 +48,83 @@
   
   .product:hover {
     transform: scale(1.05);
-  }
-  
+  } */
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  color: #000;
+  /* Texto negro */
+}
+
+/* Estilos para la tarjeta del producto */
+.product {
+  border: 1px solid #000;
+  /* Borde negro */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.card-header {
+  background-color: #000;
+  /* Fondo negro */
+  color: #fff;
+  /* Texto blanco */
+  padding: 10px;
+}
+
+.product-header-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  color: #ff0000;
+  /* Texto rojo */
+  margin: 0;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.product-description {
+  color: #333;
+  font-size: 1rem;
+}
+
+.card-footer {
+  background-color: #000;
+  /* Fondo negro */
+  padding: 10px;
+}
+
+.product-footer-button {
+  background-color: #ff0000;
+  /* Fondo rojo */
+  color: #fff;
+  /* Texto blanco */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.product-footer-button:hover {
+  background-color: #cc0000;
+  /* Fondo rojo más oscuro */
+}
+
+.product-footer-button i {
+  margin-right: 5px;
+}
