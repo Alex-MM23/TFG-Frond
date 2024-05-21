@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'dashboardLogout', component: DashboardLogoutComponent},
   { path: 'carrito', component: PageCarritoComponent},
   { path: 'admin', component: DashboardAdminComponent},
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent},
   { path: '**', redirectTo: 'dashboardLogout', pathMatch: 'full' }
 ];
 
