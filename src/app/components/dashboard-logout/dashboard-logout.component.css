@@ -21,37 +21,63 @@ a {
 a:hover {
   color: #0056b3;
 }
-
+/* .der{
+  margin-top: 300px;
+} */
 /* Estilos para las secciones */
 section {
   padding: 60px 20px;
 }
-
 .PrimerSection {
-  background: url('/src/assets/img/your-image.jpg') no-repeat center center/cover; /* Añade la imagen de fondo */
-  color: #000; /* Letras negras */
+  background: url('/src/assets/img/your-image.jpg') no-repeat center center/cover; /* Reemplaza 'your-image.jpg' con la ruta correcta */
+  color: #000000; /* Letras blancas para que contrasten con el fondo */
   position: relative;
-}
-
-.PrimerSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente para mejorar la legibilidad */
-  z-index: 1;
 }
 
 .PrimerSection .cuerpo {
   position: relative;
+  height: 680px;
   z-index: 2;
+  padding: 40px; /* Añade espacio alrededor del contenido */
 }
 
-.SegundoSection, .TercerSection, .CuartoSection {
-  background-color: #fff;
+.flex-container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.izq {
+  flex: 1;
+}
+
+.izq h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.izq h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.der {
+  flex: 1;
+  text-align: center;
+}
+
+.der img {
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+}
+
+.scroll-down {
+  margin-top: 660px; /* Añade espacio entre la imagen y la flecha */
+}
+
+.scroll-down img {
+  max-width: 50px;
+}
+
 
 /* Estilos para el contenedor principal */
 .cuerpo {
@@ -89,6 +115,7 @@ section {
 
 .flex-container .right {
   text-align: right;
+  padding: 20px;
 }
 
 .flex-container .left img, .flex-container .right img, .equipo1 img, .equipo2 img, .equipo3 img {
@@ -135,6 +162,8 @@ section {
 /* Estilos específicos para SegundoSection */
 .SegundoSection .right .der1, .SegundoSection .right .der2, .SegundoSection .right .der3, .SegundoSection .right .der4 {
   margin-bottom: 20px;
+  text-align: center;
+  display: flex;
 }
 
 .SegundoSection .right .der1 img, .SegundoSection .right .der2 img, .SegundoSection .right .der3 img, .SegundoSection .right .der4 img {
@@ -146,6 +175,8 @@ section {
 
 .SegundoSection .right .der1 p, .SegundoSection .right .der2 p, .SegundoSection .right .der3 p, .SegundoSection .right .der4 p {
   margin: 10px 0;
+  margin: 10px 0;
+  padding: 10px 20px;
 }
 
 .SegundoSection .right a {
@@ -173,6 +204,8 @@ section {
 .CuartoSection .equipo1, .CuartoSection .equipo2, .CuartoSection .equipo3 {
   margin-bottom: 20px;
   text-align: center;
+  max-width: 33%;
+  margin-top: 20px;
 }
 
 .CuartoSection .equipo1 .texto, .CuartoSection .equipo2 .texto, .CuartoSection .equipo3 .texto {
@@ -194,4 +227,7 @@ section {
 
 .CuartoSection .equipo1 .texto p, .CuartoSection .equipo2 .texto p, .CuartoSection .equipo3 .texto p {
   font-size: 0.9em;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
