@@ -13,10 +13,10 @@ export class CategoryService {
 
   constructor(private http: HttpClient) {
     this.myAppUrl = environment.endpoint;
-    this.myApiUrl = 'api/orders'
+    this.myApiUrl = 'api/categories'
   }
 
   createCategory(category: Category): Observable<Category> {
-    return this.http.post<Category>(`${this.myAppUrl}${this.myApiUrl}create`, category);
+    return this.http.post<Category>(`${this.myAppUrl}${this.myApiUrl}/create`, category);
   }
 }

@@ -23,4 +23,8 @@ export class UserService {
    login(user: User): Observable<{ token: string, profileId: number }> {
     return this.http.post<{ token: string, profileId: number }>(`${this.myAppUrl}${this.myApiUrl}/login`, user);
   }
+
+  getUser(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.myAppUrl}${this.myApiUrl}/all`);
+  }
 }

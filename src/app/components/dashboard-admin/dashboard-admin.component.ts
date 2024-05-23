@@ -3,6 +3,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { CategoryService } from 'src/app/services/category.service';
 import { Category } from 'src/app/interfaces/category';
+import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/interfaces/user';
+import { OrderService } from 'src/app/services/order.service';
+import { Order, OrderLine } from 'src/app/interfaces/order';
+import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { ErrorService } from 'src/app/services/error.service';
+import { OrderLineService } from 'src/app/services/orderLine.service';
 
 @Component({
   selector: 'app-dashboard-admin',
@@ -12,40 +20,85 @@ import { Category } from 'src/app/interfaces/category';
 export class DashboardAdminComponent implements OnInit {
 
   categoryForm: FormGroup;
+  users: User[] = [];
+  orders: Order[] = [];
+  orderlines: OrderLine[] = []
   loading: boolean = false;
+  title: string = '';
+  description: string = '';
 
   constructor(private fb: FormBuilder,
               private toastr: ToastrService,
-              private categoryService: CategoryService) {
+              private categoryService: CategoryService,
+              private userService: UserService,
+              private router: Router,
+              private _errorService: ErrorService,
+              private orderService: OrderService,
+              private orderLineService: OrderLineService) {
     this.categoryForm = this.fb.group({
       title: ['', Validators.required],
       description: ['']
     });
   }
 
-  createCategory() {
-    if (this.categoryForm.invalid) {
-      this.toastr.error('Todos los campos son obligatorios', 'Error');
-      return;
-    }
+  ngOnInit(): void {
+    this.getUser();
+    this.getOrder();
+    this.getOrderLine();
+  }
 
-    const category: Category = this.categoryForm.value;
+  addCategory() {
+    // Creamos el objeto
+    const category: Category = {
+      title: this.title,
+      description: this.description
+    };
+
     this.loading = true;
 
     this.categoryService.createCategory(category).subscribe({
-      next: (data) => {
+      next: (v) => {
+        this.toastr.success(`La Categoria ${this.title} fue registrada con éxito`);
         this.loading = false;
-        this.toastr.success('Categoría creada con éxito', 'Éxito');
-        this.categoryForm.reset();
+
+        // Limpiar los campos de entrada después de enviar
+        this.title = '';
+        this.description = '';
+
+        // Opcional: cerrar el modal
+        // this.closeModal();
       },
-      error: (err) => {
+      error: (e: HttpErrorResponse) => {
         this.loading = false;
-        this.toastr.error('Error al crear la categoría', 'Error');
+        this._errorService.msjError(e);
       }
     });
   }
+
+  // closeModal() {
+  //   const modalElement = document.getElementById('categoryModal');
+  //   if (modalElement) {
+  //      const modalInstance = new bootstrap.Modal(modalElement);
+  //      modalInstance.hide();
+  //   }
+  // }
   
-  ngOnInit(): void {
+  getUser() {
+    this.userService.getUser().subscribe(data => {
+      this.users = data;
+    })
+  }
+
+  getOrderLine() {
+    this.orderLineService.getOrderLine().subscribe(data => {
+      this.orderlines = data;
+    })
+  }
+
+  getOrder() {
+    this.orderService.getOrder().subscribe(data => {
+      this.orders = data;
+    })
   }
 
 }

@@ -1,4 +1,5 @@
 export interface Order {
+  id?: number;
   orderDate: Date;
   totalAmount: number;
   userId: number;
@@ -6,6 +7,7 @@ export interface Order {
 }
 
 export interface OrderLine {
+  orderId?: number;
   quantity: number;
   price: number;
   productId: number;

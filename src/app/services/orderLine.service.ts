@@ -2,26 +2,22 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Order } from '../interfaces/order';
+import { Order, OrderLine } from '../interfaces/order';
 
 @Injectable({
   providedIn: 'root'
 })
-export class OrderService {
+export class OrderLineService {
   private myAppUrl: string;
   private myApiUrl: string;
 
   constructor(private http: HttpClient) {
     this.myAppUrl = environment.endpoint;
-    this.myApiUrl = 'api/orders';
+    this.myApiUrl = 'api/orderLines';
   }
 
-  createOrder(order: Order): Observable<any> {
-    return this.http.post(`${this.myAppUrl}${this.myApiUrl}`, order);
-  }
-
-  getOrder(): Observable<Order[]> {
-    return this.http.get<Order[]>(`${this.myAppUrl}${this.myApiUrl}/all`);
+  getOrderLine(): Observable<OrderLine[]> {
+    return this.http.get<OrderLine[]>(`${this.myAppUrl}${this.myApiUrl}/all`);
   }
 
 }
