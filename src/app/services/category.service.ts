@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Category } from '../interfaces/category';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  private myAppUrl = 'http://localhost:3000/';
-  private myApiUrl = 'api/categories/';
+  private myAppUrl: string;
+  private myApiUrl: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.myAppUrl = environment.endpoint;
+    this.myApiUrl = 'api/orders'
+  }
 
   createCategory(category: Category): Observable<Category> {
     return this.http.post<Category>(`${this.myAppUrl}${this.myApiUrl}create`, category);

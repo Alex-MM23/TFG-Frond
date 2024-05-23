@@ -7,17 +7,16 @@ import { Order } from '../interfaces/order';
 @Injectable({
   providedIn: 'root'
 })
-export class PaymentService {
+export class OrderService {
   private myAppUrl: string;
   private myApiUrl: string;
 
   constructor(private http: HttpClient) {
     this.myAppUrl = environment.endpoint;
-    this.myApiUrl = 'api/orders'
+    this.myApiUrl = 'api/orders';
   }
 
-  // Método para enviar los datos del carrito al servidor
-  payCart(order: Order): Observable<any> {
+  createOrder(order: Order): Observable<any> {
     return this.http.post(`${this.myAppUrl}${this.myApiUrl}`, order);
   }
 }

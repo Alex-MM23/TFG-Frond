@@ -65,6 +65,22 @@ export class ProductService {
 
   }
 
+  updateUnits(operation: string, id: number): void {
+    const product = this.findProductById(id);
+    if (product) {
+      if (operation === 'minus' && product.cantidad > 0) {
+        product.cantidad -= 1;
+      }
+      if (operation === 'add') {
+        product.cantidad += 1;
+      }
+      if (product.cantidad === 0) {
+        this.deleteProduct(id);
+      }
+      this.myCart.next(this.myList);
+    }
+  }
+
   deleteProduct(id: number) {
 
     this.myList = this.myList.filter((product) => {
@@ -79,8 +95,17 @@ export class ProductService {
     return total
   }
 
-  getCartItems() {
+  getCartItems(): Product[] {
     return this.myList;
+  }
+
+  clearCart(): void {
+    this.myList = [];
+    this.myCart.next(this.myList);
+  }
+
+  getCartSnapshot(): Product[] {
+    return [...this.myList]; // Devolver una copia del carrito actual
   }
 
 }

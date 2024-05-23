@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
-import { PaymentService } from 'src/app/services/payment.service';
-import { Order, OrderLine } from 'src/app/interfaces/order';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +14,7 @@ export class CartComponent {
 
   viewCart: boolean = false;
 
-  constructor(private storeService: ProductService,  private paymentService: PaymentService,private router: Router) { }
+  constructor(private storeService: ProductService,  private paymentService: OrderService,private router: Router) { }
 
   updateUnits(operation: string, id: number) {
 
@@ -50,28 +49,5 @@ export class CartComponent {
     this.router.navigate(['/carrito'])
   }
 
-  payCart() {
-    const orderLines: OrderLine[] = this.storeService.getCartItems().map(item => ({
-      productId: item.id,
-      quantity: item.cantidad,
-      price: item.price
-    }));
-
-    const order: Order = {
-      orderDate: new Date(),
-      totalAmount: this.totalCart(),
-      userId: 1, // Puedes obtener el ID del usuario desde la sesión o donde sea necesario
-      orderLines: orderLines
-    };
-
-    this.paymentService.payCart(order).subscribe({
-      next: () => {
-        this.router.navigate(['/success']); // Redirecciona a la página de éxito después de pagar
-      },
-      error: (error) => {
-        console.error('Error al pagar el carrito:', error);
-      }
-    });
-  }
 
 }
