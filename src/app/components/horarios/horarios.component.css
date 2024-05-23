@@ -26,7 +26,7 @@ h1 {
 
 .SegundoSectionC {
     margin: 40px 0;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
 }
 
 ul li ::marker {
@@ -43,11 +43,17 @@ ul li ::marker {
     justify-content: space-around;
 }
 
+.SegundoSectionC .left2 .der2M{
+    margin-top: 100px;
+}
 
 .TercerSectionD .left3 {
     flex-basis: 38%;
     margin-top: 120px;
+}
 
+.right0002 img{
+    border-radius: 25px 25px 25px 25px;
 }
 
 .right3 img {
@@ -231,6 +237,43 @@ li::marker {
     display: flex;
     /* margin-left: 170px; */
     /* justify-content: flex-end; */
+}
+
+.QuintoSectionDD {
+    margin-bottom: 90px;
+}
+
+.QuintoSectionDD .flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.QuintoSectionDD .flex-container .izq {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    margin-left: 90px;
+}
+
+.QuintoSectionDD .flex-container .izq p{
+    max-width: 70%;
+}
+
+.QuintoSectionDDD .flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.QuintoSectionDDD .flex-container .izq {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 37%;
+}
+
+.QuintoSectionDD .der {
+    flex-basis: 35%;
 }
 
 /* Estilos del Formulario */
@@ -493,6 +536,11 @@ h1 {
 }
 
 @media only screen and (max-width: 1350px) {
+    .QuintoSectionDD .flex-container .izq p{
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .QuintoSectionDDD .flex-container .izq {
         margin-left: auto;
