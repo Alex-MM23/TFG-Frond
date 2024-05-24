@@ -30,6 +30,7 @@ import { PlanificacionComponent } from './components/planificacion/planificacion
 import { TarifasComponent } from './components/tarifas/tarifas.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { TiendaComponent } from './components/tienda/tienda.component';
     PlanificacionComponent,
     TarifasComponent,
     ContactoComponent,
-    TiendaComponent
+    TiendaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
