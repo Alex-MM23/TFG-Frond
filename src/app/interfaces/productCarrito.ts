@@ -5,6 +5,7 @@ export interface ProductCarrito {
     description: string;
     price: number;
     title: string;
+    img: string;
     cantidad: number;
     categoryId: number;
   }

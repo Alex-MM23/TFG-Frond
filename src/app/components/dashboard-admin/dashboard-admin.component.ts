@@ -37,6 +37,7 @@ export class DashboardAdminComponent implements OnInit {
   descriptionProduct: string = '';
   price: number = 0;
   titleProduct: string = '';
+  img: string = '';
   cantidad: number = 0;
   categoryId: number = 0;
 
@@ -96,6 +97,7 @@ export class DashboardAdminComponent implements OnInit {
       description: this.descriptionProduct,
       price: this.price,
       title: this.titleProduct,
+      img: this.img,
       cantidad: this.cantidad,
       categoryId: Number(this.categoryId)
     };
