@@ -173,6 +173,10 @@ ul li ::marker {
     height: 534px;
 }
 
+.SegundoSectionC .titulo ul li::marker{
+    display: none;
+}
+
 .linea {
     width: 100%;
     border-bottom: 1px solid gold;
@@ -215,6 +219,7 @@ ul li ::marker {
 .QuintoSectionC,
 li::marker {
     color: #dd2f2f;
+    display: none;
 }
 
 .QuintoSectionC p:nth-child(1) {

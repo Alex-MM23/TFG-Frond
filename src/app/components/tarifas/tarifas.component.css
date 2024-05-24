@@ -1,0 +1,139 @@
+.pricing-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.pricing-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pricing-section .title h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pricing-section .title p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-cards .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    transition: transform 0.3s;
+  }
+
+.pricing-cards .card:hover {
+    transform: translateY(-10px);
+}
+
+.card-header {
+    background: #bb140e;
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 24px;
+}
+
+.card-header p {
+    color: #fff;
+    margin: 10px 0 0;
+    font-size: 20px;
+}
+
+.card-header2 {
+    background: #bb140e;
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header2 h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 24px;
+}
+
+.card-header2 p {
+    color: #fff;
+    margin: 10px 0 0;
+    font-size: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-body ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-footer {
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn {
+    background: #bb140e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.btn:hover {
+    background: #000000;
+    color: white;
+}
+
+.title {
+    margin: 30px 0;
+}
+
+@media (max-width: 1200px) {
+    .pricing-cards .card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-cards .card {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+}

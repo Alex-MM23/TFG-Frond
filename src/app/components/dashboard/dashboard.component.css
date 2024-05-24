@@ -227,7 +227,7 @@ a:hover {
 }
 .TercerSectionD .flexcontainer{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .SegundoSectionM .flex-container .left2 {
@@ -564,12 +564,21 @@ h1 {
 /* BANNER */
 
 .CuartoSectionD {
-  height: 380px;
-  background-image: url('http://scoremarketing.es/mnldmz/wp-content/themes/advtheme/imgs/Section4-D.png');
-  background-position: right top;
-  background-repeat: no-repeat;
-  margin: 80px 0;
-}
+    height: 380px;
+    background-image: url('http://scoremarketing.es/mnldmz/wp-content/themes/advtheme/imgs/banne.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 80px 0;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
 
 .CuartoSectionD .flex-container .izq {
   flex-basis: 0;
