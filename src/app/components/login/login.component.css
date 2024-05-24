@@ -1,0 +1,48 @@
+/* Incluir una fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Aplicar la imagen de fondo deseada */
+.wrapper {
+    background-image: url('../../../assets/img/login.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; /* Aplicar la fuente a todo el contenido */
+}
+
+/* Estilos para el contenedor principal */
+.body {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center; /* Centrar el contenido del .body */
+}
+
+/* Input con border-radius */
+.form-control {
+    padding-left: 10px;
+    border-radius: 10px !important;
+    font-family: 'Roboto', sans-serif; /* Aplicar la fuente a los inputs */
+}
+
+/* Botón principal */
+.btn-primary {
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif; /* Aplicar la fuente al botón */
+}
+
+/* Ajustes adicionales */
+h3.mb-2 {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Aplicar la fuente al encabezado */
+}
+
+p.mt-3, label {
+    font-family: 'Roboto', sans-serif; /* Aplicar la fuente al texto adicional */
+}

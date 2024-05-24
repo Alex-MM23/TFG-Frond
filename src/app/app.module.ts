@@ -24,6 +24,12 @@ import { CartComponent } from './components/cart/cart.component';
 import { PageCarritoComponent } from './components/page-carrito/page-carrito.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
+import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
+import { HorariosComponent } from './components/horarios/horarios.component';
+import { PlanificacionComponent } from './components/planificacion/planificacion.component';
+import { TarifasComponent } from './components/tarifas/tarifas.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { TiendaComponent } from './components/tienda/tienda.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +44,13 @@ import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-
     CartComponent,
     PageCarritoComponent,
     SearchBarComponent,
-    DashboardAdminComponent
+    DashboardAdminComponent,
+    QuienesSomosComponent,
+    HorariosComponent,
+    PlanificacionComponent,
+    TarifasComponent,
+    ContactoComponent,
+    TiendaComponent
   ],
   imports: [
     BrowserModule,

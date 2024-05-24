@@ -1,15 +1,69 @@
+
 <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Angular Node JWT</a>
-      <button class="btn btn-outline-success" (click)="logOut()" type="button">LogOut</button>
-      <div class="navbar-cart" (click)="onToggleCart()">
-        <div class="navbar-cart-items" *ngIf="(myCart$ | async)?.length">
-          <p>{{ (myCart$ | async)?.length }}</p>
-        </div>
-        <i class="fa-solid fa-cart-shopping text-danger"></i>
-      </div>
-      </div>
-    </nav>
-    <div class="cart" [ngClass]="{ show: viewCart }">
-      <app-cart></app-cart>
+  <div class="container-fluid">
+    <!-- Logo -->
+    <div class="navbar-brand">
+      <a href="#">
+        <img class="logotop" src="/assets/img/logotopo.png" alt="LogoTop">
+      </a>
     </div>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+        <div class="nav-item">
+          <a class="nav-link" (click)="inicio()">Inicio</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" (click)="QuienesSomos()">¿Quiénes Somos?</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" (click)="Horarios()">Disciplinas y Horarios</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" (click)="Planificacion()">Planificación Online</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" (click)="Tarifas()">Tarifas</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" (click)="Contacto()">Contacto</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" (click)="Tienda()">Tienda Bulls</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LogOut Button -->
+    <button class="btn btn-outline-success" (click)="logOut()" type="button">LogOut</button>
+
+    <!-- Search Form -->
+    
+
+    <!-- User Dropdown -->
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Usuario
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" (click)="logOut()">LogOut</a></li>
+      </ul>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="navbar-cart" (click)="onToggleCart()">
+      <div class="navbar-cart-items" *ngIf="(myCart$ | async)?.length">
+        <p>{{ (myCart$ | async)?.length }}</p>
+      </div>
+      <i class="fa-solid fa-cart-shopping text-danger"></i>
+    </div>
+  </div>
+</nav>
+
+<!-- Cart Component -->
+<!-- <div class="cart" [ngClass]="{ show: viewCart }">
+  <app-cart></app-cart>
+</div> -->

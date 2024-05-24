@@ -1,4 +1,4 @@
-.product {
+/* .product {
     flex-basis: 20%;
     display: flex;
     flex-direction: column;
@@ -48,5 +48,42 @@
   
   .product:hover {
     transform: scale(1.05);
-  }
-  
+  } */
+  /* Estilos generales */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-header-title {
+    margin: 0;
+}
+
+.product-footer-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-footer-button:hover {
+    background-color: #0056b3;
+}
