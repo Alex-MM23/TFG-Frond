@@ -1,25 +1,4 @@
 <app-navbar></app-navbar>
-<div class="container mt-4 text-center">
-    <div class="row">
-        <div class="col-md-4 mb-4" *ngFor="let product of products">
-            <article class="product card h-100">
-                <div class="card-header">
-                    <h3 class="product-header-title card-title">{{ product.title }}</h3>
-                    <p class="product-price card-text">$ {{ product.price }}</p>
-                </div>
-                <div class="card-body">
-                    <!-- <img [src]="product.images[0]" alt="" class="img-fluid mb-3"/> -->
-                    <p class="product-description">{{ product.description }}</p>
-                </div>
-                <div class="card-footer">
-                    <button class="product-footer-button btn btn-danger" (click)="addToCart(product)">
-                        <i class="fa-solid fa-basket-shopping"></i> Añadir al Carrito
-                    </button>
-                </div>
-            </article>
-        </div>
-    </div>
-</div>
 <section class="TercerSectionD">
     <article class="cuerpo">
         <div class="flexcontainer">
@@ -40,70 +19,45 @@
     </a>
   </div>
   
-<section class="QuintoSectionBtn">
+  <section class="QuintoSectionBtn">
     <article class="cuerpo">
-        <div class="titulo">
-            <h1>Nuestros entrenamientos</h1>
-            <p>Ofrecemos una amplia gama de servicios especializados en carreras de obstáculos, calistenia, running,
-                trail running y carreras de obstáculos para los más pequeños</p>
+      <div class="titulo">
+        <h1>Nuestros entrenamientos</h1>
+        <p>Ofrecemos una amplia gama de servicios especializados en carreras de obstáculos, calistenia, running, trail running y carreras de obstáculos para los más pequeños</p>
+      </div>
+      <div class="botones">
+        <h4 id="mostrar_1" class="activo" (click)="showContent(1)">
+          ¿En qué consiste las OCR?
+        </h4>
+        <div id="txts_1" class="desplegable mostrar">
+          <div class="cols">
+            <p>Aprende a superar todo tipo de obstáculos, cuerda, peg board, anillas, combos de suspensión. En los entrenamientos aprenderás todos los trucos para superarte a ti mismo y ver que no tienes límites</p>
+            <a href="#">Más información [+]</a>
+          </div>
         </div>
-        <div class="botones">
-            <h4 id="mostrar_1" class="activo">
-                ¿En qué consiste las OCR?
-            </h4>
-            <div id="txts" class="desplegable mostrar">
-                <div class="cols">
-                    <p>
-                        Aprende a superar todo tipo de obstáculos, cuerda, peg board, anillas, combos de suspensión. En
-                        los entrenamientos aprenderás todos los trucos para superarte a ti mismo
-                        y ver que no tienes límites
-                    </p>
-                    <a href="#">
-                        Más información [+]
-                    </a>
-                </div>
-            </div>
-            <h4 id="mostrar_2" class="">
-                ¿En qué consiste la Calistenia?
-            </h4>
-            <div id="txts_2" class="desplegable">
-                <div class="cols">
-                    <p>
-                        Aprende todas las modalidades que puedes encontrar dentro de calistenia, desde los mejores
-                        trucos dentro del freestyle, hasta diferentes ejercicios estáticos o dinámicos que no te dejarán
-                        indiferente.
-                    </p><br>
-                    <p>
-                        Estos folículos se introducen a través de pequeños injertos de cuero
-                        cabelludo con las llamadas “unidades foliculares”. Estos injertos se
-                        obtienen con anestesia local de la zona posterior y/o lateral del
-                        cuero cabelludo (lo que llamamos zonas donantes) y, tras prepararlos
-                        minuciosamente bajo el microscopio, son introducidos cuidadosamente
-                        mediante microincisiones con Zafiro en las zonas calvas o
-                        alopécicas, de escaso pelo, que evolucionarían hacia la calvicie (o
-                        sea, las zonas receptoras).
-                    </p>
-                    <a href="#">
-                        Más información [+]
-                    </a>
-                </div>
-            </div>
-            <h4 id="mostrar_3" class="">¿En qué consiste el Running?</h4>
-            <div id="txts_3" class="desplegable">
-                <div class="cols">
-                    <p>
-                        Entrena como nunca lo has hecho, preparación específica para superar todas tus metas, cuestas,
-                        cambios de ritmos, series, fartleck...
-                        te esperarán en cada uno de nuestros entrenamientos.
-                    </p>
-                    <a href="#">
-                        Más información [+]
-                    </a>
-                </div>
-            </div>
+        <h4 id="mostrar_2" class="" (click)="showContent(2)">
+          ¿En qué consiste la Calistenia?
+        </h4>
+        <div id="txts_2" class="desplegable">
+          <div class="cols">
+            <p>Aprende todas las modalidades que puedes encontrar dentro de calistenia, desde los mejores trucos dentro del freestyle, hasta diferentes ejercicios estáticos o dinámicos que no te dejarán indiferente.</p>
+            <br>
+            <p>Estos folículos se introducen a través de pequeños injertos de cuero cabelludo con las llamadas “unidades foliculares”. Estos injertos se obtienen con anestesia local de la zona posterior y/o lateral del cuero cabelludo (lo que llamamos zonas donantes) y, tras prepararlos minuciosamente bajo el microscopio, son introducidos cuidadosamente mediante microincisiones con Zafiro en las zonas calvas o alopécicas, de escaso pelo, que evolucionarían hacia la calvicie (o sea, las zonas receptoras).</p>
+            <a href="#">Más información [+]</a>
+          </div>
         </div>
+        <h4 id="mostrar_3" class="" (click)="showContent(3)">
+          ¿En qué consiste el Running?
+        </h4>
+        <div id="txts_3" class="desplegable">
+          <div class="cols">
+            <p>Entrena como nunca lo has hecho, preparación específica para superar todas tus metas, cuestas, cambios de ritmos, series, fartleck... te esperarán en cada uno de nuestros entrenamientos.</p>
+            <a href="#">Más información [+]</a>
+          </div>
+        </div>
+      </div>
     </article>
-</section>
+  </section>  
 <section class="CuartoSectionD">
     <article class="cuerpo">
         <div class="flex-container">

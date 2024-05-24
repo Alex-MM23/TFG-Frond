@@ -55,6 +55,20 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.desplegable {
+    display: none;
+  }
+  
+  .desplegable.mostrar {
+    display: block;
+  }
+  
+  .botones h4.activo {
+    font-weight: bold;
+    color: #007bff; /* Cambia el color según tu preferencia */
+  }
+  
+
 h2 {
   color: #4b4b4b;
   /* Texto negro */
