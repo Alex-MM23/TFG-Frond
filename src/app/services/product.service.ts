@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Product } from '../interfaces/product';
+import { ProductCarrito } from '../interfaces/productCarrito';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,10 @@ export class ProductService {
      const headers = new HttpHeaders().set('Authorization',`Bearer ${token}`) */
     /*     return this.http.get<Product[]>(`${this.myAppUrl}${this.myApiUrl}`, { headers: headers } ) */
     return this.http.get<Product[]>(`${this.myAppUrl}${this.myApiUrl}`)
+  }
+
+  createProduct(product: ProductCarrito): Observable<ProductCarrito> {
+    return this.http.post<ProductCarrito>(`${this.myAppUrl}${this.myApiUrl}/create`, product);
   }
 
   //lista carrito

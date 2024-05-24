@@ -11,6 +11,10 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorService } from 'src/app/services/error.service';
 import { OrderLineService } from 'src/app/services/orderLine.service';
+import { Product } from 'src/app/interfaces/product';
+import { data } from 'jquery';
+import { ProductCarrito } from 'src/app/interfaces/productCarrito';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-dashboard-admin',
@@ -22,14 +26,24 @@ export class DashboardAdminComponent implements OnInit {
   categoryForm: FormGroup;
   users: User[] = [];
   orders: Order[] = [];
-  orderlines: OrderLine[] = []
+  orderlines: OrderLine[] = [];
+  categorys: Category[] = [];
   loading: boolean = false;
+  // Category
   title: string = '';
   description: string = '';
+  // Product
+  name: string = '';
+  descriptionProduct: string = '';
+  price: number = 0;
+  titleProduct: string = '';
+  cantidad: number = 0;
+  categoryId: number = 0;
 
   constructor(private fb: FormBuilder,
               private toastr: ToastrService,
               private categoryService: CategoryService,
+              private productService: ProductService,
               private userService: UserService,
               private router: Router,
               private _errorService: ErrorService,
@@ -45,6 +59,7 @@ export class DashboardAdminComponent implements OnInit {
     this.getUser();
     this.getOrder();
     this.getOrderLine();
+    this.getCategory();
   }
 
   addCategory() {
@@ -75,6 +90,43 @@ export class DashboardAdminComponent implements OnInit {
     });
   }
 
+  addProduct() {
+    const product: ProductCarrito = {
+      name: this.name,
+      description: this.descriptionProduct,
+      price: this.price,
+      title: this.titleProduct,
+      cantidad: this.cantidad,
+      categoryId: Number(this.categoryId)
+    };
+
+    console.log(product);
+    
+    this.loading = true;
+
+    this.productService.createProduct(product).subscribe({
+      next: (v) => {
+        this.toastr.success(`El producto ${this.titleProduct} fue registrado con éxito`);
+        this.loading = false;
+
+        // Limpiar los campos de entrada después de enviar
+        this.name = '';
+        this.descriptionProduct = '';
+        this.price = 0;
+        this.titleProduct = '';
+        this.cantidad = 0;
+        this.categoryId = 0;
+
+        // Opcional: cerrar el modal
+        // this.closeModal();
+      },
+      error: (e: HttpErrorResponse) => {
+        this.loading = false;
+        this.toastr.error('Error al registrar el producto');
+      }
+    });
+  }
+
   // closeModal() {
   //   const modalElement = document.getElementById('categoryModal');
   //   if (modalElement) {
@@ -83,6 +135,12 @@ export class DashboardAdminComponent implements OnInit {
   //   }
   // }
   
+  getCategory() {
+    this.categoryService.getCategory().subscribe(data => {
+      this.categorys = data;
+    })
+  }
+
   getUser() {
     this.userService.getUser().subscribe(data => {
       this.users = data;
