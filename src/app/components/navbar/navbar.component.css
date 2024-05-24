@@ -57,17 +57,20 @@
 }
 
 .dropdown-item {
-  color: #000; /* Texto en negro */
+  color: #fff; /* Texto en blanco */
 }
 
 .navbar-cart {
   color: #000; /* Icono del carrito en negro */
   margin-left: 20px;
+  cursor: pointer; /* Cambiar cursor al pasar sobre el icono */
 }
 
 .navbar-cart-items p {
   color: #000;
   background-color: #fff; /* Fondo blanco */
+  border-radius: 50%;
+  padding: 2px 8px;
 }
 
 .cart {
@@ -80,3 +83,42 @@
   height: 180px;
 }
 
+.nav-item.current-page a {
+  color: #bb140e;
+  font-weight: 600;
+}
+
+/* Ajustes para pantallas menores de 1200px */
+/* @media (max-width: 1199.98px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-cart {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .btn-outline-success {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  .dropdown {
+    margin-top: 10px;
+  }
+} */
+
+/* Ajustes para el toggle button */
+.navbar-toggler {
+  border-color: #000;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}

@@ -1,2 +1,50 @@
 <app-navbar></app-navbar>
-<p>contacto works!</p>
+<div class="titulo">
+    <h2>¿Dónde nos puedes encontrar?</h2>
+    <p>En muchas ubicaciones como ya sabes pero siempre AQUÍ</p> 
+</div>
+<section class="maps">
+    <article class="cuerpo">
+        <div class="frame">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.5481951630213!2d-3.724545623469483!3d40.41885865550898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228731594db71%3A0x88219b7bcf2335d5!2sPuente%20del%20Rey!5e0!3m2!1ses!2ses!4v1716518206937!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </article>
+</section>
+<div class="pre-footer">
+    <article class="cuerpo">
+        <div class="formulario">
+            <div class="tituloform">
+                <h1>Reserva tu entrenamiento</h1>
+                <p>Estamos a tu disposición para atender todas tus consultas y comentarios.
+                    Puedes utilizar el formulario que tienes más abajo para contactar con nosotros </p>
+            </div>
+            <form action="http://scoremarketing.es/mnldmz/wp-content/themes/advtheme/php/formulario.php" method="post">
+                <div class="col">
+                    <input type="text" name="nombre" value="" placeholder="Nombre" class="margen" required="">
+                    <input type="number" name="telefono" value="" placeholder="Teléfono" required="">
+                </div>
+                <div class="col dos2">
+                    <input type="email" name="email" value="" placeholder="Email" class="margen" required="">
+                    <input type="text" name="ciudad" value="" placeholder="Ciudad">
+                </div>
+                <div class="col ultima2">
+                    <textarea name="comentario" placeholder="Consultas y comentarios"></textarea>
+                    <p class="politicas">
+                        <input type="checkbox" name="politica" value="Aceptada" id="politica" required="">
+                        <label for="politica">
+                            He leído y acepto la <a
+                                href="http://scoremarketing.es/mnldmz/politica-de-privacidad/">Política de
+                                Privacidad</a>
+                        </label>
+                    </p>
+                    <input type="submit" name="" value="Enviar">
+                    <input type="hidden" name="url" id="url" value="http://scoremarketing.es/mnldmz/demodermaclinic/">
+                </div>
+                <div class="limpiar"></div>
+            </form>
+        </div>
+    </article>
+</div>
