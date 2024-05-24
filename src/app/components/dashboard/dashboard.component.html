@@ -101,51 +101,27 @@
         </div>
     </article>
 </section>
+
 <section class="carruselM">
     <article class="cuerpo">
-        <div class="titulo2">
-            <h1>Nuestro equipo</h1>
-            <p>En Brave Bulls, contamos con un destacado equipo internacional de entrenadores innovadores. Capacitados
-                para atender en varios idiomas y priorizando la satisfacción de mujeres y hombres que valoran su imagen
-                y bienestar.</p>
+      <div class="titulo2">
+        <h1>Nuestro equipo</h1>
+        <p>En Brave Bulls, contamos con un destacado equipo internacional de entrenadores innovadores. Capacitados para atender en varios idiomas y priorizando la satisfacción de mujeres y hombres que valoran su imagen y bienestar.</p>
+      </div>
+      <div class="carousel-container">
+        <div class="carousel-item" *ngFor="let member of teamMembers; let i = index" [class.active]="i === currentSlide">
+          <img [src]="member.img" alt="Imagen">
+          <div class="texto-derecha">
+            <p class="t">{{ member.username }}</p>
+            <p [innerHTML]="member.description"></p>
+          </div>
         </div>
-        <div class="owl-carousel owl-theme">
-            <div class="item">
-                <img src="/assets/img/javi.png" alt="Imagen 1">
-                <div class="texto-derecha">
-                    <p class="t">@javirun90</p>
-                    <p>Emprendedor de la vida misma.<br>CEO BRAVE BULLS.<br>Amante de su trabajo y concienciado en su
-                        proyecto.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="/assets/img/dani.png" alt="Imagen 2">
-                <div class="texto-derecha">
-                    <p class="t">@ocr_coach</p>
-                    <p>
-                        Emprendedor de la vida misma.<br>OCR Elite Athlete<br>Gestión deportiva y
-                        fisioterapia<br>Entrenador OCR Madrid Río y Boadilla del Monte
-                    </p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="/assets/img/vanesa.png" alt="Imagen 3">
-                <div class="texto-derecha">
-                    <p class="t">@vanefg7</p>
-                    <p>Entrenadora OCR y competidora élite.<br>Al tanto para informaros de todo trás las pantallas junto
-                        a su mano derecha, Manuel.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="/assets/img/manu.png" alt="Imagen 3">
-                <div class="texto-derecha">
-                    <p class="t">@manurun02</p>
-                    <p>Community Manager de RRSS.</p>
-                </div>
-            </div>
-        </div>
+        <button class="prev" (click)="prevSlide()">&#10094;</button>
+        <button class="next" (click)="nextSlide()">&#10095;</button>
+      </div>
     </article>
-</section>
+  </section>  
+  
 <app-footer></app-footer>
     <!-- </div>
 <section class="footer">

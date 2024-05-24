@@ -50,6 +50,67 @@
     transform: scale(1.05);
   } */
 
+/* Carrusel */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-item {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Added to center the content vertically */
+    text-align: center;
+    width: 100%; /* Make sure the item takes the full width */
+  }
+  
+  .carousel-item.active {
+    display: flex;
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    right: 585px;
+  }
+  
+  .texto-derecha {
+    text-align: center;
+    margin-top: 10px;
+    right: 580px;
+  }
+  
+  .texto-derecha .t {
+    font-weight: bold;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+
 /* Estilos generales */
 body {
   font-family: 'Open Sans', sans-serif;
