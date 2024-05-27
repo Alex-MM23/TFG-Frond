@@ -32,6 +32,7 @@ const routes: Routes = [
   { path: 'tarifas', component: TarifasComponent},
   { path: 'contacto', component: ContactoComponent},
   { path: 'tienda', component: TiendaComponent},
+  { path: 'tienda/:categoryId', component: TiendaComponent},
   { path: '**', redirectTo: 'dashboardLogout', pathMatch: 'full' }
 ];
 

@@ -77,12 +77,14 @@
   .carousel-item img {
     max-width: 100%;
     height: auto;
+    position: relative;
     right: 585px;
   }
   
   .texto-derecha {
     text-align: center;
     margin-top: 10px;
+    position: relative;
     right: 580px;
   }
   

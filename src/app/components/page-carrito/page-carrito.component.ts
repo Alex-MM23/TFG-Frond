@@ -92,6 +92,7 @@ export class PageCarritoComponent implements OnInit, OnDestroy {
         this.router.navigate(['/dashboard']);
       },
       error: (err) => {
+        console.log(order)
         console.error('Error placing order:', err);
         this.toastr.error('Error al realizar pedido')
       }

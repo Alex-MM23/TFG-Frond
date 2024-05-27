@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <!-- Logo -->
@@ -29,8 +28,19 @@
         <div class="nav-item">
           <a class="nav-link" (click)="Contacto()">Contacto</a>
         </div>
-        <div class="nav-item">
-          <a class="nav-link" (click)="Tienda()">Tienda Bulls</a>
+        <!-- Tienda Dropdown -->
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tienda Bulls
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
+            <li><a class="dropdown-item" (click)="verTodosProductos()">Todos los productos</a></li>
+            <li *ngFor="let category of categories">
+              <ng-container *ngIf="category.id !== undefined">
+                <a class="dropdown-item" (click)="verProductosPorCategoria(category.id)">{{ category.title }}</a>
+              </ng-container>
+            </li>
+          </ul>          
         </div>
       </div>
     </div>
@@ -50,6 +60,6 @@
 </nav>
 
 <!-- Cart Component -->
-<!-- <div class="cart" [ngClass]="{ show: viewCart }">
+<div class="cart" [ngClass]="{ show: viewCart }">
   <app-cart></app-cart>
-</div> -->
+</div>

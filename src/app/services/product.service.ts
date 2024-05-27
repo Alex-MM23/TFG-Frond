@@ -28,6 +28,10 @@ export class ProductService {
     return this.http.post<ProductCarrito>(`${this.myAppUrl}${this.myApiUrl}/create`, product);
   }
 
+  getProductsByCategory(categoryId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.myAppUrl}${this.myApiUrl}/products?categoryId=${categoryId}`);
+  }
+
   //lista carrito
   private myList: Product[] = [];
 
