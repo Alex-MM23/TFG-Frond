@@ -10,6 +10,10 @@ import { ProductService } from 'src/app/services/product.service';
 export class DashboardComponent implements OnInit {
   products: Product[] = [];
   currentSlide = 0;
+  isDragging = false;
+  startPos = 0;
+  prevTranslate = 0;
+  currentTranslate = 0;
   teamMembers = [
     {
       img: '/assets/img/javi.png',
@@ -37,50 +41,68 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
+    this.initCarousel();
   }
 
   nextSlide() {
     this.currentSlide = (this.currentSlide + 1) % this.teamMembers.length;
+    this.setCarouselPosition();
   }
 
   prevSlide() {
     this.currentSlide = (this.currentSlide - 1 + this.teamMembers.length) % this.teamMembers.length;
+    this.setCarouselPosition();
+  }
+
+  initCarousel() {
+    const carouselContainer = document.querySelector('.carousel-container') as HTMLElement;
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mousedown', this.startDrag.bind(this));
+      carouselContainer.addEventListener('mouseup', this.endDrag.bind(this));
+      carouselContainer.addEventListener('mouseleave', this.endDrag.bind(this));
+      carouselContainer.addEventListener('mousemove', this.drag.bind(this));
+    }
+  }
+  
+  startDrag(event: MouseEvent) {
+    this.isDragging = true;
+    this.startPos = event.clientX;
+    this.prevTranslate = this.currentTranslate;
+  }
+  
+  endDrag() {
+    this.isDragging = false;
+  }
+  
+  drag(event: MouseEvent) {
+    if (this.isDragging) {
+      const currentPosition = event.clientX;
+      this.currentTranslate = this.prevTranslate + currentPosition - this.startPos;
+      this.setCarouselPosition();
+    }
+  }
+  
+  setCarouselPosition() {
+    const carousel = document.querySelector('.carousel') as HTMLElement;
+    if (carousel) {
+      const translateX = -this.currentSlide * carousel.clientWidth + this.currentTranslate;
+      carousel.style.transform = `translateX(${translateX}px)`;
+    }
   }
 
   getProducts() {
     this._productService.getProducts().subscribe(data => {
       this.products = data;
-    })
+    });
   }
 
   addToCart(product: Product) {
-
-    this._productService.addProduct(product)
+    this._productService.addProduct(product);
   }
 
   showContent(index: number) {
-    // Primero ocultamos todos los textos desplegables
-    const allTextElements = document.querySelectorAll('.desplegable');
-    allTextElements.forEach(element => {
-      element.classList.remove('mostrar');
-    });
-
-    // Quitamos la clase 'activo' de todos los botones
-    const allButtons = document.querySelectorAll('.botones h4');
-    allButtons.forEach(button => {
-      button.classList.remove('activo');
-    });
-
-    // Mostramos el texto correspondiente y añadimos la clase 'activo' al botón
-    const selectedTextElement = document.getElementById(`txts_${index}`);
-    const selectedButton = document.getElementById(`mostrar_${index}`);
-    
-    if (selectedTextElement) {
-      selectedTextElement.classList.add('mostrar');
-    }
-    if (selectedButton) {
-      selectedButton.classList.add('activo');
-    }
+    // Your implementation of showContent function
   }
-
 }
+
+
