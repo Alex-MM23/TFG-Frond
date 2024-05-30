@@ -67,9 +67,9 @@
 
 .navbar-nav {
   display: flex;
-  flex-direction: row; /* Elementos en una sola línea */
-  flex-grow: 1; /* Estirar para ocupar todo el espacio disponible */
-  justify-content: space-around; /* Distribuir uniformemente */
+  flex-direction: row-reverse;
+  flex-grow: 1;
+  margin-right: 20px;
 }
 
 .navbar-nav .nav-item {
@@ -92,6 +92,7 @@
 .btn-outline-success {
   color: #000;
   margin-right: 20px;
+  margin-left: 20px;
   border-color: #000; /* Borde del botón LogOut en negro */
 }
 
@@ -136,37 +137,92 @@
   font-weight: 600;
 }
 
-/* Ajustes para pantallas menores de 1200px */
-/* @media (max-width: 1199.98px) {
-  .navbar-nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar-nav .nav-item {
-    margin-bottom: 10px;
-  }
-
-  .navbar-cart {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .btn-outline-success {
-    margin-top: 10px;
-    margin-right: 0;
-  }
-
-  .dropdown {
-    margin-top: 10px;
-  }
-} */
-
 /* Ajustes para el toggle button */
 .navbar-toggler {
   border-color: #000;
 }
 
+.navbar-nav {
+  display: flex;
+  flex-direction: row; /* Cambiar de row-reverse a row */
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+.btn-menu-movil img{
+  height: 30px;
+  display: none;
+}
+
+div#mySidenav {
+  transition: all ease 0.7s;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+div#mySidenav.mostrar {
+  right: 0;
+}
+
+.cart-image{
+  height: 60px;
+}
+
+@media (min-width: 300px) and (max-width: 1360px) {
+  .nav-item {
+    display: none;
+  }
+  #btn-menu-movil img{
+    display: block;
+  }
+
+  .navbar-nav {
+    margin-left: 95%;
+    width: 30px;
+  }
+}
+
+@media (min-width: 1360px) and (max-width: 1920px) {
+  .nav-item {
+    display: block;
+  }
+  #btn-menu-movil img {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+  
+
+  .nav-item {
+    display: none !important;
+  }
+  #btn-menu-movil img{
+    display: block !important;
+  }
+
+  .navbar-nav {
+    margin-left: 95% !important;
+    width: 30px !important;
+  }
+}
+
+
+
+
+

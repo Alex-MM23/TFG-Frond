@@ -566,13 +566,12 @@ div#btn-menu-movil {
 
 	div#btn-menu-movil {
 		display: inline-block;
-		max-width: 35px;
-		margin-left: 15px;
+		width: 120px;
 		order: 3;
 	}
 }
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
 	#cuerpo-blog .entry-content p {
 		text-align: left;
 	}
@@ -580,4 +579,4 @@ div#btn-menu-movil {
 	#cuerpo-blog .entry-content ul li {
 		text-align: left;
 	}
-}
+} */
