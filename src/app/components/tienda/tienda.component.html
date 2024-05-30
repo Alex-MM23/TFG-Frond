@@ -24,12 +24,31 @@
                 <div class="col-md-4 mb-4" *ngFor="let product of products">
                     <article class="product card h-100">
                         <div class="card-header">
-                            <h3 class="product-header-title card-title">{{ product.title }}</h3>
-                            <img src="../../../assets/img/{{product.img}}" class="img-fluid">
-                            <p class="product-price card-text">$ {{ product.price }}</p>
+                            <h3 class="product-header-title card-title">Camiseta Manga Corta</h3>
                         </div>
+                        <img src="/assets/img/CamisetaMangaCorta.png" class="card-img-top img-fluid">
                         <div class="card-body">
-                            <p class="product-description">{{ product.description }}</p>
+                            <p class="product-price card-text">20€</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="product-footer-button btn btn-danger" (click)="addToCart(product)">
+                                <i class="fa-solid fa-basket-shopping"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4 mb-4" *ngFor="let product of products">
+                    <article class="product card h-100">
+                        <div class="card-header">
+                            <h3 class="product-header-title card-title">Camiseta Tirantes Pro</h3>
+                        </div>
+                        <img src="/assets/img/CamisetaMangaCorta.png" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <p class="product-price card-text">30€</p>
                         </div>
                         <div class="card-footer">
                             <button class="product-footer-button btn btn-danger" (click)="addToCart(product)">

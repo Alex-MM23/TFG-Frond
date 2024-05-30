@@ -12,7 +12,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorService } from 'src/app/services/error.service';
 import { OrderLineService } from 'src/app/services/orderLine.service';
 import { Product } from 'src/app/interfaces/product';
-import { data } from 'jquery';
+import * as $ from 'jquery'; // Aquí está la importación corregida
 import { ProductCarrito } from 'src/app/interfaces/productCarrito';
 import { ProductService } from 'src/app/services/product.service';
 
