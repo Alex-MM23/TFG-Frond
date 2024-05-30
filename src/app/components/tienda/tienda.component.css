@@ -1,0 +1,47 @@
+/* Estilos para cada producto */
+.product {
+    border: 1px solid #ddd; /* Borde del producto */
+    border-radius: 5px; /* Borde redondeado */
+    margin-bottom: 20px; /* Espacio entre productos */
+    transition: box-shadow 0.3s ease; /* Transición suave del sombreado */
+}
+
+.product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave al pasar el cursor sobre el producto */
+}
+
+.product .card-header {
+    background-color: #f8f9fa; /* Color de fondo del encabezado del producto */
+    padding: 10px; /* Espaciado interno del encabezado del producto */
+}
+
+.product .card-header .product-header-title {
+    margin: 0; /* Eliminar margen del título del producto */
+}
+
+.product .card-img-top {
+    border-top-left-radius: 5px; /* Borde redondeado superior izquierdo de la imagen */
+    border-top-right-radius: 5px; /* Borde redondeado superior derecho de la imagen */
+}
+
+.product .card-body {
+    padding: 15px; /* Espaciado interno del cuerpo del producto */
+}
+
+.product .product-price {
+    font-weight: bold; /* Texto del precio en negrita */
+    color: #007bff; /* Color del precio */
+}
+
+.product .card-footer {
+    padding: 15px; /* Espaciado interno del pie del producto */
+}
+
+.product-footer-button {
+    width: 100%; /* Ancho completo del botón */
+}
+
+.product-footer-button:hover {
+    background-color: #dc3545; /* Color de fondo del botón al pasar el cursor */
+    border-color: #dc3545; /* Color del borde del botón al pasar el cursor */
+}
