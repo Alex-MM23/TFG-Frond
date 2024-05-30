@@ -145,7 +145,7 @@ li::marker {
     justify-content: center;
     flex-direction: column;
     flex-basis: 42%;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 
 .right3 {

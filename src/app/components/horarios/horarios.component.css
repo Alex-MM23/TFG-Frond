@@ -43,7 +43,7 @@ ul li ::marker {
     justify-content: space-around;
 }
 
-.SegundoSectionC .left2 .der2M{
+.SegundoSectionC .left2 .der2M {
     margin-top: 100px;
 }
 
@@ -52,7 +52,7 @@ ul li ::marker {
     margin-top: 70px;
 }
 
-.right0002 img{
+.right0002 img {
     border-radius: 25px 25px 25px 25px;
 }
 
@@ -173,7 +173,7 @@ ul li ::marker {
     height: 534px;
 }
 
-.SegundoSectionC .titulo ul li::marker{
+.SegundoSectionC .titulo ul li::marker {
     display: none;
 }
 
@@ -214,6 +214,22 @@ ul li ::marker {
 
 .QuintoSectionC {
     margin: 70px 0;
+}
+
+.titulo ul {
+    list-style-type: none;
+    /* Elimina los marcadores */
+    padding-left: 0;
+    /* Elimina el espacio de la sangría */
+}
+
+.titulo ul li {
+    margin-bottom: 10px;
+    /* Añade espacio entre los elementos de la lista */
+}
+
+.titulo h3 {
+    margin-bottom: 35px;
 }
 
 .QuintoSectionC,
@@ -260,7 +276,7 @@ li::marker {
     margin-left: 90px;
 }
 
-.QuintoSectionDD .flex-container .izq p{
+.QuintoSectionDD .flex-container .izq p {
     max-width: 70%;
 }
 
@@ -540,7 +556,7 @@ h1 {
 }
 
 @media only screen and (max-width: 1350px) {
-    .QuintoSectionDD .flex-container .izq p{
+    .QuintoSectionDD .flex-container .izq p {
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;

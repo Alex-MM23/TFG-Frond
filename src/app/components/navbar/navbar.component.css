@@ -90,10 +90,15 @@
 }
 
 .btn-outline-success {
-  color: #000;
-  margin-right: 20px;
+  /* color: #000; */
+  /* margin-right: 20px; */
   margin-left: 20px;
-  border-color: #000; /* Borde del botón LogOut en negro */
+  border-color: transparent;
+  /* border-color: #000; Borde del botón LogOut en negro */
+}
+
+.btn-outline-success:hover {
+  background-color: transparent;
 }
 
 .form-control {
@@ -181,7 +186,9 @@ div#mySidenav.mostrar {
 .cart-image{
   height: 60px;
 }
-
+.btn.btn-outline-success{
+  height: 60px;
+}
 @media (min-width: 300px) and (max-width: 1360px) {
   .nav-item {
     display: none;
