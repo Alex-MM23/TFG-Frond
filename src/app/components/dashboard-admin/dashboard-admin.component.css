@@ -1,0 +1,67 @@
+/* Estilos generales */
+body {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+}
+
+.container {
+    padding: 20px;
+}
+
+h2 {
+    color: #ff0000; /* Título rojo */
+}
+
+.card {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #000; /* Borde negro */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #ff0000; /* Título rojo */
+}
+
+.card-text {
+    color: #000; /* Texto negro */
+}
+
+.btn-primary {
+    background-color: #ff0000; /* Fondo rojo para botones primarios */
+    border-color: #ff0000; /* Borde rojo para botones primarios */
+    color: #fff; /* Texto blanco */
+}
+
+.btn-primary:hover {
+    background-color: #cc0000; /* Cambio de color al pasar el ratón */
+    border-color: #cc0000; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos específicos para el modal */
+.modal-content {
+    background-color: #fff; /* Fondo blanco */
+}
+
+.modal-title {
+    color: #ff0000; /* Título rojo */
+}
+
+.modal-body {
+    color: #000; /* Texto negro */
+}
+
+/* Estilos específicos para los formularios */
+.form-control {
+    background-color: #fff; /* Fondo blanco */
+    border-color: #000; /* Borde negro */
+    color: #000; /* Texto negro */
+}
+
+/* Ajustes adicionales */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
