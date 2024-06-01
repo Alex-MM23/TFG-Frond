@@ -1134,10 +1134,6 @@ footer p,
   .flechas {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 600px;
-    position: absolute;
-    top: 50%;
     transform: translateY(-50%);
   }
 
