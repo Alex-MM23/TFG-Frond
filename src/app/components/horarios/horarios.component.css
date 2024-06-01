@@ -218,7 +218,7 @@ ul li ::marker {
 
 .QuintoSectionC,
 li::marker {
-    color: #dd2f2f;
+    color: transparent;
     display: none;
 }
 
