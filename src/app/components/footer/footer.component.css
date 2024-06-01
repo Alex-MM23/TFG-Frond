@@ -623,6 +623,8 @@ body {
     margin-bottom: 10px;
     color: #4b4b4b;
   }
+
+  
   
   .btn2 {
     color: #ffffff; /* Cambia el color del texto a blanco */
@@ -666,6 +668,7 @@ body {
   .pre-footer .tituloform {
     padding-top: 80px;
     padding-bottom: 30px;
+    margin-left: 15px;
   }
   
   .pre-footer .tituloform h1 {

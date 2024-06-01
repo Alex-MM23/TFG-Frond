@@ -290,9 +290,13 @@ section.cuerpo-politicas h3 {
 /*--------------------FORMULARIO--------------------*/
 .formulario .col {
 	float: left;
-	width: 45%;
+	width: 47%;
 	margin-bottom: 20px;
-	margin-right: 5%;
+	margin-right: 1%;
+}
+
+.pre-footer[_ngcontent-abf-c51] .tituloform[_ngcontent-abf-c51] {
+    margin-left: 15px !important;
 }
 
 .formulario .col.dos{

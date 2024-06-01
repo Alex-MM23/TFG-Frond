@@ -46,15 +46,15 @@
     </div>
 
     <!-- LogOut Button -->
-    <button class="btn btn-outline-success" (click)="logOut()" type="button">LogOut</button>
-
+    <img class="btn btn-outline-success" (click)="logOut()" src="/assets/img/salir.png" alt="salir">
 
     <!-- Cart Icon -->
     <div class="navbar-cart" (click)="onToggleCart()">
       <div class="navbar-cart-items" *ngIf="(myCart$ | async)?.length">
         <p>{{ (myCart$ | async)?.length }}</p>
       </div>
-      <i class="fa-solid fa-cart-shopping"></i>
+      
+      <img class="fa-solid fa-cart-shopping" src="/assets/img/carro.png" alt="">
     </div>
     </div>
   </nav>

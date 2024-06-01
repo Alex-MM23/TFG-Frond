@@ -25,11 +25,6 @@ export class DashboardComponent implements OnInit {
       img: '/assets/img/vanesa.png',
       username: '@vanefg7',
       description: 'Entrenadora OCR y competidora élite.<br>Al tanto para informaros de todo trás las pantallas junto a su mano derecha, Manuel.'
-    },
-    {
-      img: '/assets/img/manu.png',
-      username: '@manurun02',
-      description: 'Community Manager de RRSS.'
     }
   ];
   
