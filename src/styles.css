@@ -562,6 +562,14 @@ div#btn-menu-movil {
 	display: none;
 }
 
+.dropdown-menu.show{
+	width: 200px !important; 
+}
+
+.dropdown-item{
+	color: black !important;
+}
+
 /*--------------------RESPONSIVE--------------------*/
 @media only screen and (max-width: 1290px) {
 	header#masthead .parte-der nav#site-navigation {

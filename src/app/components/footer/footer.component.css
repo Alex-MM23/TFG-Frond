@@ -2738,6 +2738,17 @@ body {
     .SegundoSectionD .flex-container .right2 .der2 p:nth-child(2) {
         max-width: 100%;
     }
+
+    .politicas{
+        font-size: 16px; 
+    }
+  }
+
+  @media only screen and (max-width: 370px) {
+  
+    .politicas{
+        font-size: 14px; 
+    }
   }
   
   @media only screen and (max-width: 360px) {
@@ -2752,11 +2763,25 @@ body {
             width: 270px;
     } */
   }
+
+  @media only screen and (max-width: 323px) {
+  
+    .politicas{
+        font-size: 13px; 
+    }
+  }
   
   
   @media only screen and (max-width: 311px) {
     .tituloo h2 {
         font-size: 33px;
+    }
+  }
+
+  @media only screen and (max-width: 306px) {
+  
+    .politicas{
+        font-size: 12px; 
     }
   }
   
