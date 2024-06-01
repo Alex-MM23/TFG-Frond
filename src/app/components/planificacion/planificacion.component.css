@@ -345,11 +345,22 @@ h1 {
   }
   
   @media only screen and (max-width: 1350px) {
+    .SegundoSectionM .right002 {
+        text-align: center;
+    }
   
     .QuintoSectionDDD .flex-container .izq {
         margin-left: auto;
         margin-right: auto;
         max-width: 70%;
+    }
+
+    .btn4{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ol, ul {
+        padding-left: 0rem;
     }
   
     .SegundoSectionBX {
@@ -1608,7 +1619,9 @@ h1 {
   }
   
   @media screen and (max-width: 760px) {
-  
+    ol, ul {
+        padding-left: 0rem;
+    }
     .titulo52 p {
         text-align: center;
         width: 90%;
@@ -2037,6 +2050,9 @@ h1 {
     .PrimerSection {
         background-position: -410px;
     }
+    ol, ul {
+        padding-left: 0rem;
+    }
   
     /* #pre-footer {
         margin-top: 1700px;
@@ -2044,6 +2060,9 @@ h1 {
   }
   
   @media only screen and (max-width: 450px) {
+    ol, ul {
+        padding-left: 0rem;
+    }
     .owl-carousel .item .texto-derecha {
         margin: 0 30px;
     }
@@ -2088,7 +2107,9 @@ h1 {
   }
   
   @media only screen and (max-width: 360px) {
-  
+    ol, ul {
+        padding-left: 0rem !important;
+    }
     .TercerSectionL .izq8 p {
         max-width: 100%;
     }
