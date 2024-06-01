@@ -1,6 +1,6 @@
 <div class="productCart-wrapper">
     <div class="">
-        <i class="fa-solid fa-right-from-bracket fa-2xl" (click)="pgdest()"></i>
+      <img class="fa-solid fa-right-from-bracket fa-2xl" (click)="pgdest()" src="/assets/img/salir.png" alt="salir">
     </div>
     <article class="productCart" *ngFor="let product of myCart$ | async">
       <div class="productCart-body">
@@ -25,7 +25,7 @@
             (click)="updateUnits('add', product.id)"
           ></i>
         </div>
-        <i class="fa-solid fa-trash" (click)="deleteProduct(product.id)"></i>
+        <img src="/assets/img/papelera.png" class="fa-solid fa-trash" (click)="deleteProduct(product.id)" alt="">
       </div>
     </article>
     <div class="cartTotal">
