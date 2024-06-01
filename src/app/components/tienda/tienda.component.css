@@ -7,3 +7,9 @@
     color: #ffffff !important;
     width: 200px !important;
 }
+
+.card-footer{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: transparent !important;
+}
