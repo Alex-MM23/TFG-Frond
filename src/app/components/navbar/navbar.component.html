@@ -30,28 +30,36 @@
         </div>
         <!-- Tienda Dropdown -->
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Tienda Bulls
           </a>
           <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
             <li><a class="dropdown-item" (click)="verTodosProductos()">Todos los productos</a></li>
-            <li *ngFor="let category of categories">
-              <ng-container *ngIf="category.id !== undefined">
-                <a class="dropdown-item" (click)="verProductosPorCategoria(category.id)">{{ category.title }}</a>
-              </ng-container>
-            </li>
           </ul>
-        </div>
+        </div>       
       </div>
     </div>
     <button id="toggle-menu" (click)="toggleMenu()">☰</button>
     <nav id="menu">
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a class="nav-link" (click)="inicio()">Inicio</a></li>
+        <li><a class="nav-link" (click)="QuienesSomos()">¿Quiénes Somos?</a></li>
+        <li><a class="nav-link" (click)="Horarios()">Disciplinas y Horarios</a></li>
+        <li><a class="nav-link" (click)="Planificacion()">Planificación Online</a></li>
+        <li><a class="nav-link" (click)="Tarifas()">Tarifas</a></li>
+        <li><a class="nav-link" (click)="Contacto()">Contacto</a></li>
+        <li><a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Tienda Bulls
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
+          <li><a class="dropdown-item" (click)="verTodosProductos()">Todos los productos</a></li>
+          <li *ngFor="let category of categories">
+            <ng-container *ngIf="category.id !== undefined">
+              <a class="dropdown-item" (click)="verProductosPorCategoria(category.id)">{{ category.title }}</a>
+            </ng-container>
+          </li>
+        </ul></li>
       </ul>
     </nav>
     <!-- LogOut Button -->

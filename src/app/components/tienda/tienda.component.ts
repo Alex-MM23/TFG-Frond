@@ -33,12 +33,6 @@ export class TiendaComponent implements OnInit {
     this._productService.addProduct(product)
   }
 
-  getProductsByCategory(categoryId: number): void {
-    this._productService.getProductsByCategory(categoryId).subscribe(products => {
-      this.products = products;
-    });
-  }
-
   getAllCategories(): void {
     this.categoryService.getCategory().subscribe(data => {
       this.categories = data;
@@ -61,6 +55,18 @@ export class TiendaComponent implements OnInit {
         this.verProductosPorCategoria(categoryId);
       }
     }
+  }
+
+  getAllProducts(): void {
+    this._productService.getProducts().subscribe(products => {
+      this.products = products;
+    });
+  }
+  
+  getProductsByCategory(categoryId: number): void {
+    this._productService.getProductsByCategory(categoryId).subscribe(products => {
+      this.products = products;
+    });
   }
 
 }

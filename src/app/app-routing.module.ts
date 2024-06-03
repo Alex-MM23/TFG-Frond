@@ -45,7 +45,7 @@ const routes: Routes = [
   { path: 'contactoLogout', component: ContactoLogoutComponent},
   { path: 'tiendaLogout', component: TiendaLogoutComponent},
   { path: 'tiendaLogout/:categoryId', component: TiendaLogoutComponent},
-  { path: 'tienda/:categoryId', component: TiendaComponent},
+  { path: 'tienda/:categoryId', component: TiendaComponent },
   { path: '**', redirectTo: 'dashboardLogout', pathMatch: 'full' }
 ];
 
