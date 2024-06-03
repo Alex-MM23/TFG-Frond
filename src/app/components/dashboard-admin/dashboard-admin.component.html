@@ -136,7 +136,21 @@
             <div class="card-body">
               <h5 class="card-title">Titulo: {{category.title}}</h5>
               <p class="card-text"><strong>Descripcion:</strong> {{category.description}}</p>
-              <button class="btn btn-danger" (click)="Eliminar(category.id)">Eliminar</button>
+              <button class="btn btn-danger" (click)="Eliminar(category.id!)">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="text-center mt-4">Productos</h2>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-3" *ngFor="let product of products">
+            <div class="card-body">
+              <h5 class="card-title">Titulo: {{product.name}}</h5>
+              <p class="card-text"><strong>Descripcion:</strong> {{product.description}}</p>
+              <button class="btn btn-danger" (click)="eliminarProducto(product.id!)">Eliminar</button>
             </div>
           </div>
         </div>

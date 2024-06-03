@@ -28,6 +28,7 @@ export class DashboardAdminComponent implements OnInit {
   orders: Order[] = [];
   orderlines: OrderLine[] = [];
   categorys: Category[] = [];
+  products: Product[] = [];
   loading: boolean = false;
   // Category
   title: string = '';
@@ -61,6 +62,7 @@ export class DashboardAdminComponent implements OnInit {
     this.getOrder();
     this.getOrderLine();
     this.getCategory();
+    this.getProduct();
   }
 
   addCategory() {
@@ -143,6 +145,12 @@ export class DashboardAdminComponent implements OnInit {
     })
   }
 
+  getProduct() {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data;
+    })
+  }
+
   getUser() {
     this.userService.getUser().subscribe(data => {
       this.users = data;
@@ -166,27 +174,44 @@ export class DashboardAdminComponent implements OnInit {
     this.router.navigate(['/login'])
   }
 
-  getCategories(): void {
-    this.categoryService.getCategory().subscribe((data: Category[]) => {
-      this.categorys = data;
-    });
-  }
-
-  Eliminar(id: number | undefined): void {
+  Eliminar(id: number): void {
     if (id === undefined) {
       console.error('Category id is undefined');
       return;
     }
-    
-    this.categoryService.deleteCategory(id).subscribe(
-      response => {
-        console.log('Category deleted successfully', response);
-        this.getCategories(); // Refresca la lista de categorías después de eliminar
+
+    this.categoryService.deleteCategory(id).subscribe({
+      next: response => {
+        this.toastr.success('La categoría fue eliminada');
+        this.getCategory(); // Refresca la lista de categorías después de eliminar
       },
-      error => {
-        console.error('Error deleting category', error);
+      error: error => {
+        this.toastr.error('Error eliminando la categoría');
+      },
+      complete: () => {
+        console.log('Delete category request completed');
       }
-    );
+    });
+  } 
+
+  eliminarProducto(id: number): void {
+    if (id === undefined) {
+      console.error('Product id is undefined');
+      return;
+    }
+  
+    this.productService.delete(id).subscribe({
+      next: response => {
+        this.toastr.success('El producto fue eliminado');
+        this.getProduct(); // Refresca la lista de productos después de eliminar
+      },
+      error: error => {
+        this.toastr.error('Error eliminando el producto');
+      },
+      complete: () => {
+        console.log('Delete product request completed');
+      }
+    });
   }
   
 }

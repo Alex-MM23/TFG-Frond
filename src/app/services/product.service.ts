@@ -24,6 +24,10 @@ export class ProductService {
     return this.http.get<Product[]>(`${this.myAppUrl}${this.myApiUrl}`)
   }
 
+  delete(id: number): Observable<any> {
+    return this.http.delete(`${this.myAppUrl}${this.myApiUrl}/${id}`);
+  }
+
   createProduct(product: ProductCarrito): Observable<ProductCarrito> {
     return this.http.post<ProductCarrito>(`${this.myAppUrl}${this.myApiUrl}/create`, product);
   }

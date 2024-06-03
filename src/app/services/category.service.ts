@@ -25,7 +25,7 @@ export class CategoryService {
   }
 
   deleteCategory(id: number): Observable<any> {
-    return this.http.delete(`${this.myApiUrl}${this.myAppUrl}/delete${id}`);
+    return this.http.delete(`${this.myAppUrl}${this.myApiUrl}/all/${id}`);
   }
 
 }
