@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -28,7 +29,8 @@ export class DashboardComponent implements OnInit {
     }
   ];
   
-  constructor(private _productService: ProductService) { }
+  constructor(private _productService: ProductService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -76,6 +78,10 @@ export class DashboardComponent implements OnInit {
     if (selectedButton) {
       selectedButton.classList.add('activo');
     }
+  }
+
+  horarios(){
+    this.router.navigate(['/horarios'])
   }
 
 }

@@ -161,4 +161,9 @@ export class DashboardAdminComponent implements OnInit {
     })
   }
 
+  login(){
+    localStorage.removeItem('token');
+    this.router.navigate(['/login'])
+  }
+
 }

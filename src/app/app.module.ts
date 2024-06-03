@@ -31,6 +31,12 @@ import { TarifasComponent } from './components/tarifas/tarifas.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TiendaLogoutComponent } from './components/tienda-logout/tienda-logout.component';
+import { TarifasLogoutComponent } from './components/tarifas-logout/tarifas-logout.component';
+import { QuienesSomosLogoutComponent } from './components/quienes-somos-logout/quienes-somos-logout.component';
+import { PlanificacionLogoutComponent } from './components/planificacion-logout/planificacion-logout.component';
+import { ContactoLogoutComponent } from './components/contacto-logout/contacto-logout.component';
+import { HorariosLogoutComponent } from './components/horarios-logout/horarios-logout.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +58,13 @@ import { FooterComponent } from './components/footer/footer.component';
     TarifasComponent,
     ContactoComponent,
     TiendaComponent,
-    FooterComponent
+    FooterComponent,
+    TiendaLogoutComponent,
+    TarifasLogoutComponent,
+    QuienesSomosLogoutComponent,
+    PlanificacionLogoutComponent,
+    ContactoLogoutComponent,
+    HorariosLogoutComponent
   ],
   imports: [
     BrowserModule,

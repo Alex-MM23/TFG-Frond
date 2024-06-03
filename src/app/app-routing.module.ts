@@ -17,6 +17,12 @@ import { PlanificacionComponent } from './components/planificacion/planificacion
 import { TarifasComponent } from './components/tarifas/tarifas.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { TiendaComponent } from './components/tienda/tienda.component';
+import { QuienesSomosLogoutComponent } from './components/quienes-somos-logout/quienes-somos-logout.component';
+import { HorariosLogoutComponent } from './components/horarios-logout/horarios-logout.component';
+import { PlanificacionLogoutComponent } from './components/planificacion-logout/planificacion-logout.component';
+import { TarifasLogoutComponent } from './components/tarifas-logout/tarifas-logout.component';
+import { ContactoLogoutComponent } from './components/contacto-logout/contacto-logout.component';
+import { TiendaLogoutComponent } from './components/tienda-logout/tienda-logout.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboardLogout', pathMatch: 'full' },
@@ -32,6 +38,13 @@ const routes: Routes = [
   { path: 'tarifas', component: TarifasComponent},
   { path: 'contacto', component: ContactoComponent},
   { path: 'tienda', component: TiendaComponent},
+  { path: 'quienes-somosLogout', component: QuienesSomosLogoutComponent},
+  { path: 'horariosLogout', component: HorariosLogoutComponent},
+  { path: 'planificacionLogout', component: PlanificacionLogoutComponent},
+  { path: 'tarifasLogout', component: TarifasLogoutComponent},
+  { path: 'contactoLogout', component: ContactoLogoutComponent},
+  { path: 'tiendaLogout', component: TiendaLogoutComponent},
+  { path: 'tiendaLogout/:categoryId', component: TiendaLogoutComponent},
   { path: 'tienda/:categoryId', component: TiendaComponent},
   { path: '**', redirectTo: 'dashboardLogout', pathMatch: 'full' }
 ];

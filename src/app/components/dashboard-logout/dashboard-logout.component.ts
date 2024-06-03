@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -25,15 +26,11 @@ export class DashboardLogoutComponent implements OnInit {
       img: '/assets/img/vanesa.png',
       username: '@vanefg7',
       description: 'Entrenadora OCR y competidora élite.<br>Al tanto para informaros de todo trás las pantallas junto a su mano derecha, Manuel.'
-    },
-    {
-      img: '/assets/img/manu.png',
-      username: '@manurun02',
-      description: 'Community Manager de RRSS.'
     }
   ];
   
-  constructor(private _productService: ProductService) { }
+  constructor(private _productService: ProductService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -81,6 +78,10 @@ export class DashboardLogoutComponent implements OnInit {
     if (selectedButton) {
       selectedButton.classList.add('activo');
     }
+  }
+
+  horarios(){
+    this.router.navigate(['/horariosLogout'])
   }
 
 }

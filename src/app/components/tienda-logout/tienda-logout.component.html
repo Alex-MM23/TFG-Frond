@@ -1,0 +1,45 @@
+<app-navbar-logout></app-navbar-logout>
+<div class="container mt-4">
+    <div class="row">
+        <!-- Sidebar de Categorías -->
+        <div class="col-md-3 mb-4">
+            <ul class="list-group">
+                <li class="list-group-item"
+                    (click)="verTodosProductos()"
+                    (keydown)="handleKeyDown($event, -1)">
+                    Todos los productos
+                </li>
+                <li class="list-group-item"
+                    *ngFor="let category of categories"
+                    (click)="category.id && verProductosPorCategoria(category.id)"
+                    (keydown)="category.id && handleKeyDown($event, category.id)">
+                    {{ category.title }}
+                </li>
+            </ul>
+        </div>
+
+        <!-- Lista de Productos -->
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4 mb-4" *ngFor="let product of products">
+                    <article class="product card h-100">
+                        <div class="card-header">
+                            <h3 class="product-header-title card-title">{{ product.title }}</h3>
+                            <img src="../../../assets/img/{{product.img}}" class="img-fluid">
+                            <p class="product-price card-text">{{ product.price }} €</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="product-description">{{ product.description }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="product-footer-button btn btn-danger" (click)="login()">
+                                <i class="fa-solid fa-basket-shopping"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
