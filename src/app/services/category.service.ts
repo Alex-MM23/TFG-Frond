@@ -24,4 +24,8 @@ export class CategoryService {
     return this.http.get<Category[]>(`${this.myAppUrl}${this.myApiUrl}/all`);
   }
 
+  deleteCategory(id: number): Observable<any> {
+    return this.http.delete(`${this.myApiUrl}${this.myAppUrl}/delete${id}`);
+  }
+
 }

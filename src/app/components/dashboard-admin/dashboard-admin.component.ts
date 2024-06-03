@@ -166,4 +166,27 @@ export class DashboardAdminComponent implements OnInit {
     this.router.navigate(['/login'])
   }
 
+  getCategories(): void {
+    this.categoryService.getCategory().subscribe((data: Category[]) => {
+      this.categorys = data;
+    });
+  }
+
+  Eliminar(id: number | undefined): void {
+    if (id === undefined) {
+      console.error('Category id is undefined');
+      return;
+    }
+    
+    this.categoryService.deleteCategory(id).subscribe(
+      response => {
+        console.log('Category deleted successfully', response);
+        this.getCategories(); // Refresca la lista de categorías después de eliminar
+      },
+      error => {
+        console.error('Error deleting category', error);
+      }
+    );
+  }
+  
 }
