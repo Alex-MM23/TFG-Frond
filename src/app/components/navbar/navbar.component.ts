@@ -73,4 +73,15 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/tienda', categoryId]);
   }
 
+  toggleMenu(): void {
+    const menu = document.getElementById('menu');
+    if (menu) {
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+  }  
+
 }
