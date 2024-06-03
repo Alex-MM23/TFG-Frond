@@ -310,11 +310,12 @@ section.cuerpo-politicas h3 {
 
 .formulario .col.ultima2 {
 	margin-right: 0;
+	margin-top: -20px;
 	width: 95%;
 }
 
 .formulario .politicas {
-	text-align: right;
+	text-align: left;
 	margin-top: 18px;
 }
 
@@ -341,9 +342,9 @@ section.cuerpo-politicas h3 {
 	width: 100%;
 }
 
-.formulario .margen {
+/* .formulario .margen {
 	margin-bottom: 40px;
-}
+} */
 
 .formulario input[type="text"]::placeholder,
 .formulario input[type="email"]::placeholder,

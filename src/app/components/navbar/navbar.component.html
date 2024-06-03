@@ -30,7 +30,8 @@
         </div>
         <!-- Tienda Dropdown -->
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="tiendaDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             Tienda Bulls
           </a>
           <ul class="dropdown-menu" aria-labelledby="tiendaDropdown">
@@ -40,21 +41,19 @@
                 <a class="dropdown-item" (click)="verProductosPorCategoria(category.id)">{{ category.title }}</a>
               </ng-container>
             </li>
-          </ul>          
+          </ul>
         </div>
       </div>
-      <button id="toggle-menu" (click)="toggleMenu()">☰</button>
-      <nav id="menu">
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
-
     </div>
-
+    <button id="toggle-menu" (click)="toggleMenu()">☰</button>
+    <nav id="menu">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
     <!-- LogOut Button -->
     <img class="btn btn-outline-success" (click)="logOut()" src="/assets/img/salir.png" alt="salir">
 
@@ -63,11 +62,11 @@
       <div class="navbar-cart-items" *ngIf="(myCart$ | async)?.length">
         <p>{{ (myCart$ | async)?.length }}</p>
       </div>
-      
+
       <img class="fa-solid fa-cart-shopping" src="/assets/img/carro.png" alt="">
     </div>
-    </div>
-  </nav>
-  <div class="cart" [ngClass]="{ show: viewCart }">
-    <app-cart></app-cart>
   </div>
+</nav>
+<div class="cart" [ngClass]="{ show: viewCart }">
+  <app-cart></app-cart>
+</div>
